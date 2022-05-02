@@ -1,3 +1,86 @@
 <resources>
-    <string name="app_name">E_commerce_app</string>
+    <string name="app_name">MAD-Project-1</string>
+    <string name="title_activity_menu">MenuActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="about_us">About Us</string>
+    <string name="contact_us">Contact Us</string>
+    <string name="sign_out">SIGN OUT</string>
+    <string name="chnage_order">Change Order</string>
+    <string name="buy_now">BUY NOW</string>
+    <string name="order_id">Order ID : </string>
+    <string name="change_order">Change Your Order</string>
+    <string name="change_order_btn">Change Order</string>
+    <string name="notification_settings">Notification Settings</string>
+
+    <string-array name="cloth_size">
+        <item>S</item>
+        <item>M</item>
+        <item>L</item>
+        <item>XL</item>
+    </string-array>
+
+    <string-array name="cloth_quantity">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+    </string-array>
+
+
+    <string name="bags_title">Bags</string>
+    <string name="price_title">LKR 1000.00</string>
+    <string name="frocks_title">Frocks</string>
+    <string name="trousers_title">Trousers</string>
+    <string name="shoes_title">Shoes</string>
+    <string name="tshirt_title">T-Shirts</string>
+    <string name="jewellery_title">Jewellery</string>
+    <string name="add_item_icon">Upload New Item</string>
+    <string name="item_name">Item Name</string>
+    <string name="item_URL">Image URL</string>
+    <string name="item_code">Item Code</string>
+    <string name="description">Description</string>
+    <string name="price">Price</string>
+    <string name="category">Category</string>
+    <string name="size">Available Sizes</string>
+    <string name="update_items_title">Update Item Details</string>
+    <string name="update_items_btn">UPDATE DETAILS</string>
+    <string name="notification_title">Notification Settings</string>
+    <string name="orders">Orders</string>
+    <string name="vouchers">Vouchers</string>
+    <string name="others">Others</string>
+    <string name="notification_text">Turn off the buttons to disable your notification</string>
+    <string name="buyNow_title">Buy Now</string>
+    <string name="b_name">Your Name</string>
+    <string name="b_address">Address</string>
+    <string name="b_Province">Province</string>
+    <string name="b_postal_code">Postal Code</string>
+    <string name="b_item_code">Item Code</string>
+    <string name="b_size">Size</string>
+    <string name="b_quantity">Quantity</string>
+    <string name="b_phone_Number">Phone Number</string>
+    <string name="buy_noe_btn">PLACE YOUR ORDER</string>
+    <string name="change_order_title">Change Your Order</string>
+    <string name="change_order_b">CHANGE ORDER</string>
+    <string name="settings">Settings</string>
+    <string name="profile">Profile</string>
+    <string name="shipping_address">Shipping Address</string>
+    <string name="more_service">More Service</string>
+    <string name="notifications">Notification Settings</string>
+    <string name="privacy">Privacy Policy</string>
+    <string name="about">About Us</string>
+    <string name="contact">Contact Us</string>
+    <string name="cart_title">Cart</string>
+    <string name="quantity">Quantity</string>
 </resources>
+
