@@ -8,6 +8,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.google.firebase.database.FirebaseDatabase;
+
+import java.util.HashMap;
+
 public class MainActivity extends AppCompatActivity {
 
     Button btn;
@@ -25,9 +29,15 @@ public class MainActivity extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), cart.class);
+                Intent intent = new Intent(getApplicationContext(), product_add.class);
                 startActivity(intent);
             }
         });
+
+        HashMap<String, Object> map = new HashMap<>();
+        map.put("name", "Sasindu");
+        map.put("email", "sasindu@gmail.com");
+
+        FirebaseDatabase.getInstance().getReference().child("programming").child("hash-map").updateChildren(map);
     }
 }
