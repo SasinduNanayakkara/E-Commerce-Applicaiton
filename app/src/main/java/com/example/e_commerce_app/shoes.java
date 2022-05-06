@@ -49,16 +49,21 @@ public class shoes extends AppCompatActivity {
                 shoeList.clear();
                 for(DataSnapshot dataSnapshot: snapshot.getChildren()){
                     shoeList.add(dataSnapshot.getValue().toString());
+
                 }
                 adapter.notifyDataSetChanged();
+                final ArrayList<String> item = new ArrayList<>();
+
 
             }
+
 
             @Override
             public void onCancelled(@NonNull DatabaseError error) {
 
             }
         });
+
 
     }
 }
