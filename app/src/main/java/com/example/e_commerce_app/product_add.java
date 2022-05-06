@@ -57,6 +57,7 @@ public class product_add extends AppCompatActivity {
                     map.put("size", size);
 
                     FirebaseDatabase.getInstance().getReference().child("honeyBeeDB").child("Products").push().updateChildren(map);
+                    Toast.makeText(product_add.this, "Product added successfully", Toast.LENGTH_SHORT).show();
                 }
             }
         });
