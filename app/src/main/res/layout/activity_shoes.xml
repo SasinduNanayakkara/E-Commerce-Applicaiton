@@ -8,7 +8,7 @@
     tools:context=".shoes">
 
     <ImageView
-        android:id="@+id/imageView58"
+        android:id="@+id/shoePageBack"
         android:layout_width="38dp"
         android:layout_height="38dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -30,7 +30,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.06"
-        app:layout_constraintStart_toEndOf="@+id/imageView58"
+        app:layout_constraintStart_toEndOf="@+id/shoePageBack"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.00999999" />
 
@@ -43,11 +43,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.06"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView58"
+        app:layout_constraintTop_toBottomOf="@+id/shoePageBack"
         app:layout_constraintVertical_bias="0.06999999">
 
         <ImageView
-            android:id="@+id/imageView59"
+            android:id="@+id/shoeImage1"
             android:layout_width="185dp"
             android:layout_height="200dp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -59,7 +59,7 @@
             app:srcCompat="@drawable/sh1" />
 
         <TextView
-            android:id="@+id/textView66"
+            android:id="@+id/shoePrice1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="LKR 1000.00"
@@ -69,7 +69,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView59" />
+            app:layout_constraintTop_toBottomOf="@+id/shoeImage1" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -80,11 +80,11 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/constraintLayout27"
-        app:layout_constraintTop_toBottomOf="@+id/imageView58"
+        app:layout_constraintTop_toBottomOf="@+id/shoePageBack"
         app:layout_constraintVertical_bias="0.060000002">
 
         <ImageView
-            android:id="@+id/imageView60"
+            android:id="@+id/shoeImage2"
             android:layout_width="185dp"
             android:layout_height="200dp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -95,7 +95,7 @@
             app:srcCompat="@drawable/sh4" />
 
         <TextView
-            android:id="@+id/textView67"
+            android:id="@+id/shoePrice2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="LKR 1000.00"
@@ -105,7 +105,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView60" />
+            app:layout_constraintTop_toBottomOf="@+id/shoeImage2" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -121,7 +121,7 @@
         app:layout_constraintVertical_bias="0.13">
 
         <ImageView
-            android:id="@+id/imageView61"
+            android:id="@+id/shoeImage3"
             android:layout_width="185dp"
             android:layout_height="200dp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -132,7 +132,7 @@
             app:srcCompat="@drawable/h7" />
 
         <TextView
-            android:id="@+id/textView68"
+            android:id="@+id/shoePrice3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="LKR 1000.00"
@@ -142,7 +142,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView61" />
+            app:layout_constraintTop_toBottomOf="@+id/shoeImage3" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -156,7 +156,7 @@
         app:layout_constraintVertical_bias="0.18">
 
         <ImageView
-            android:id="@+id/imageView62"
+            android:id="@+id/shoeImage4"
             android:layout_width="185dp"
             android:layout_height="200dp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -167,7 +167,7 @@
             app:srcCompat="@drawable/sh5" />
 
         <TextView
-            android:id="@+id/textView69"
+            android:id="@+id/shoePrice4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="LKR 1000.00"
@@ -177,19 +177,23 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView62" />
+            app:layout_constraintTop_toBottomOf="@+id/shoeImage4" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="408dp"
         android:layout_height="81dp"
+        android:layout_marginEnd="3dp"
         android:background="@drawable/layout_border"
         android:backgroundTint="@color/black"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="632dp">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0">
 
         <ImageView
-            android:id="@+id/imageView63"
+            android:id="@+id/homePageIcon"
             android:layout_width="38dp"
             android:layout_height="38dp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -200,23 +204,23 @@
             app:srcCompat="@drawable/home_pic_white" />
 
         <ImageView
-            android:id="@+id/imageView64"
+            android:id="@+id/cartIcon"
             android:layout_width="38dp"
             android:layout_height="38dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.3"
-            app:layout_constraintStart_toEndOf="@+id/imageView63"
+            app:layout_constraintStart_toEndOf="@+id/homePageIcon"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/cart_pic_white" />
 
         <ImageView
-            android:id="@+id/imageView65"
+            android:id="@+id/profileIcon"
             android:layout_width="38dp"
             android:layout_height="38dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/imageView64"
+            app:layout_constraintStart_toEndOf="@+id/cartIcon"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/profile_pic_white" />
     </androidx.constraintlayout.widget.ConstraintLayout>
