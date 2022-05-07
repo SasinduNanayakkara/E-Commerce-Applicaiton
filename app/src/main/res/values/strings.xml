@@ -77,7 +77,6 @@
     <string name="shipping_address">Shipping Address</string>
     <string name="more_service">More Service</string>
     <string name="notifications">Notification Settings</string>
-    <string name="about">About Us</string>
     <string name="contact">Contact Us</string>
     <string name="cart_title">Cart</string>
     <string name="quantity">Quantity</string>
@@ -112,6 +111,74 @@
     <string name="text37">21/B, Kandy Road, Kadawatha</string>
     <string name="text38">Western Province,Sri lanka</string>
     <string name="text39">Edit</string>
+
+
+    <string name="about">About Us</string>
+    <string name="honey_bee">HONEY BEE is an online fashion store</string>
+    <string name="text01">which brings you unique and elegant designs</string>
+    <string name="text02">to add a touch of glamour to your everyday</string>
+    <string name="text03">life!!!</string>
+    <string name="text04">Each month, HONEY BEE store will</string>
+    <string name="text05">introduce a new style or collection, keeping</string>
+    <string name="text06">up with current trends and fashion needs</string>
+    <string name="text07">while preserving distinctive designs at all</string>
+    <string name="text08">times.</string>
+    <string name="text09">Our goal is to give zigzag consumers with</string>
+    <string name="text10">a hassle-free online and physical shopping</string>
+    <string name="text11">experience with a wide choice of items.</string>
+    <string name="text12">We look forward to spoiling you with our</string>
+    <string name="text13">stylish, high-quality items at reasonable</string>
+    <string name="text14">prices.</string>
+    <string name="text15">Our items are hand-picked by a team of</string>
+    <string name="text16">talented designers who utilize them to convey</string>
+    <string name="text17">the subtleties of their culture and society.</string>
+    <string name="text18">Their enthusiasm is reflected in each of their</string>
+    <string name="text19">designs and quality, which is based on strong</string>
+    <string name="text20">strong.</string>
+
+    <string name="get_in_touch">Get In Touch</string>
+    <string name="your_name">Your Name</string>
+    <string name="your_email">Your Email</string>
+    <string name="you_want">You want to talk about</string>
+    <string name="your_message">Your message</string>
+    <string name="send">Send</string>
+
+    <string name="text46">HONEY BEE</string>
+    <string name="text47">_HONEY BEE spring sale has SPRUNG !_</string>
+    <string name="text48">UP</string>
+    <string name="text49">TO</string>
+    <string name="text50">80% OFF</string>
+    <string name="text51">Buy 3 Get</string>
+    <string name="text52">20% OFF</string>
+    <string name="text53">Shop Now</string>
+    <string name="text54">Shop Now</string>
+    <string name="text55">2 For</string>
+    <string name="text56">S18</string>
+    <string name="text57">🚚 Shipping Info</string>
+
+    <string name="more_services">More Services</string>
+    <string name="Vouchers">Vouchers</string>
+    <string name="text21">LKR 200.00 OFF</string>
+    <string name="text22">For orders over LKR 400.00</string>
+    <string name="text23">Code : sheasia</string>
+    <string name="text24">03/15/2022 - 04/14/2022</string>
+    <string name="text25">LKR 400.00 OFF</string>
+    <string name="text26">For orders over LKR 1000.00</string>
+    <string name="text27">Code : 2378087</string>
+    <string name="text28">03/15/2022 - 04/24/2022</string>
+    <string name="text29">LKR 600.00 OFF</string>
+    <string name="text30">For orders over LKR 1500.00</string>
+    <string name="text31">Code : 2267812</string>
+    <string name="text32">03/18/2022 - 05/18/2022</string>
+
+
+    <string name="payment">Payment</string>
+    <string name="card_num">Card Number</string>
+    <string name="expiry_date">Expiry Date</string>
+    <string name="cvv">CVV</string>
+    <string name="text33">Name</string>
+    <string name="save_card">Save Card Details</string>
+    <string name="pay">Pay</string>
 
 </resources>
 

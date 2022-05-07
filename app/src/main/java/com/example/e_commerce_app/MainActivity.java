@@ -22,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         getSupportActionBar().hide();
         setContentView(R.layout.activity_main);
+
         btn = findViewById(R.id.btn);
         textMsg = findViewById(R.id.textMsg);
 
@@ -29,9 +30,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Intent intent = new Intent(getApplicationContext(), shipping_address.class);
-
-                Intent intent = new Intent(getApplicationContext(), shoes.class);
+                Intent intent = new Intent(getApplicationContext(), sample.class);
                 startActivity(intent);
             }
         });

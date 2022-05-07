@@ -29,7 +29,6 @@
             android:name=".first"
             android:exported="false" />
         <activity
-            android:name=".sign_in"
             android:name=".sample"
             android:exported="false" />
         <activity
