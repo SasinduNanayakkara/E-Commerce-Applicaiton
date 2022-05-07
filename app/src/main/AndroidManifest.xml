@@ -10,7 +10,49 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.E_commerce_app">
         <activity
-            android:name=".activity_your_order"
+            android:name=".sample"
+            android:exported="false" />
+        <activity
+            android:name=".product_add"
+            android:exported="false" />
+        <activity
+            android:name=".reset_password"
+            android:exported="false" />
+        <activity
+            android:name=".register"
+            android:exported="false" />
+        <activity
+            android:name=".profile"
+            android:exported="false" />
+        <activity
+            android:name=".notification_settings"
+            android:exported="false" />
+        <activity
+            android:name=".setting"
+            android:exported="false" />
+        <activity
+            android:name=".shoes"
+            android:exported="false" />
+        <activity
+            android:name=".jewelry"
+            android:exported="false" />
+        <activity
+            android:name=".bags"
+            android:exported="false" />
+        <activity
+            android:name=".edit_profile"
+            android:exported="false" />
+        <activity
+            android:name=".chnage_order"
+            android:exported="false" />
+        <activity
+            android:name=".cart"
+            android:exported="false" />
+        <activity
+            android:name=".admin_product_view"
+            android:exported="false" />
+        <activity
+            android:name=".buy_now"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

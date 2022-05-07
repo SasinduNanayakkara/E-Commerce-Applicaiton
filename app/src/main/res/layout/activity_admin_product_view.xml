@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@color/background_color"
+    android:layout_height="match_parent"
+    tools:context=".admin_product_view">
+
+    <ImageView
+        android:id="@+id/imageView23"
+        android:layout_width="38dp"
+        android:layout_height="38dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.06"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.050000012"
+        app:srcCompat="@drawable/back_btn_white" />
+
+    <TextView
+        android:id="@+id/singleProductName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Summer T-shirt"
+        android:textColor="@color/bee_yellow"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.21"
+        app:layout_constraintStart_toEndOf="@+id/imageView23"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.050000012" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="376dp"
+        android:layout_height="602dp"
+        android:background="@drawable/layout_border"
+        android:backgroundTint="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.457"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/singleProductName"
+        app:layout_constraintVertical_bias="0.65">
+
+        <ImageView
+            android:id="@+id/SingleProductImage"
+            android:layout_width="312dp"
+            android:layout_height="316dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.07999998"
+            app:srcCompat="@drawable/tshirt1" />
+
+        <TextView
+            android:id="@+id/SingleProductDescription"
+            android:layout_width="296dp"
+            android:layout_height="69dp"
+            android:text="Women Striped Oversized T-shirt Fashion 90s short Sleeve Loose T-shirts Female Casual Tops Clothes Streetwear T shirt"
+            android:textColor="@color/bee_yellow"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/SingleProductImage"
+            app:layout_constraintVertical_bias="0.04000002" />
+
+        <TextView
+            android:id="@+id/SingleProductPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LKR 1,055.53"
+            android:textColor="@color/bee_yellow"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/SingleProductDescription"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <Button
+            android:id="@+id/SingleProductUpdate"
+            android:layout_width="148dp"
+            android:layout_height="58dp"
+            android:background="@drawable/layout_border"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:text="Update Product"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/SingleProductSize" />
+
+        <Button
+            android:id="@+id/SingleProductDelete"
+            android:layout_width="150dp"
+            android:layout_height="59dp"
+            android:background="@drawable/layout_border"
+            android:paddingLeft="30dp"
+            android:paddingRight="30dp"
+            android:text="Delete Product"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.58"
+            app:layout_constraintStart_toEndOf="@+id/SingleProductUpdate"
+            app:layout_constraintTop_toBottomOf="@+id/SingleProductSize" />
+
+        <TextView
+            android:id="@+id/SingleProductSize"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Available : XS | S | M | L"
+            android:textColor="@color/bee_yellow"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/SingleProductPrice"
+            app:layout_constraintVertical_bias="0.100000024" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
