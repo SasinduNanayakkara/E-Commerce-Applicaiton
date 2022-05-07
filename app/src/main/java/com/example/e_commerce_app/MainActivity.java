@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), cart.class);
+                Intent intent = new Intent(getApplicationContext(), shipping_address.class);
                 startActivity(intent);
             }
         });
