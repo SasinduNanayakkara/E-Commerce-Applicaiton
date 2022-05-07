@@ -3,24 +3,28 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/MAD/app/src/main/res/drawable-v24/layout_border.xml" value="0.252" />
+        <entry key="..\:/MAD/app/src/main/res/drawable/back.xml" value="0.252" />
+        <entry key="..\:/MAD/app/src/main/res/drawable/cart_pic_white.xml" value="0.252" />
+        <entry key="..\:/MAD/app/src/main/res/drawable/home_pic_white.xml" value="0.252" />
+        <entry key="..\:/MAD/app/src/main/res/drawable/profile_pic_white.xml" value="0.252" />
+        <entry key="..\:/MAD/app/src/main/res/drawable/selected_profile.xml" value="0.252" />
+        <entry key="..\:/MAD/app/src/main/res/layout/activity_admin_product_view.xml" value="0.24635416666666668" />
+        <entry key="..\:/MAD/app/src/main/res/layout/activity_bags.xml" value="0.24635416666666668" />
+        <entry key="..\:/MAD/app/src/main/res/layout/activity_buy_now.xml" value="0.22780797101449277" />
+        <entry key="..\:/MAD/app/src/main/res/layout/activity_cart.xml" value="0.24635416666666668" />
+        <entry key="..\:/MAD/app/src/main/res/layout/activity_chnage_order.xml" value="0.24635416666666668" />
+        <entry key="..\:/MAD/app/src/main/res/layout/activity_edit_profile.xml" value="0.24635416666666668" />
+        <entry key="..\:/MAD/app/src/main/res/layout/activity_jewelry.xml" value="0.24635416666666668" />
         <entry key="..\:/MAD/app/src/main/res/layout/activity_main.xml" value="0.22780797101449277" />
-        <entry key="..\:/Users/ASUS/AndroidStudioProjects/E-Commerce-Applicaiton/app/src/main/res/drawable/circle.xml" value="0.144" />
-        <entry key="..\:/Users/ASUS/AndroidStudioProjects/E-Commerce-Applicaiton/app/src/main/res/layout/activity_about_us.xml" value="0.2" />
-        <entry key="..\:/Users/ASUS/AndroidStudioProjects/E-Commerce-Applicaiton/app/src/main/res/layout/activity_admin_product_view.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/ASUS/AndroidStudioProjects/E-Commerce-Applicaiton/app/src/main/res/layout/activity_buy_now.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/ASUS/AndroidStudioProjects/E-Commerce-Applicaiton/app/src/main/res/layout/activity_chnage_order.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/ASUS/AndroidStudioProjects/E-Commerce-Applicaiton/app/src/main/res/layout/activity_contact_us.xml" value="0.2" />
-        <entry key="..\:/Users/ASUS/AndroidStudioProjects/E-Commerce-Applicaiton/app/src/main/res/layout/activity_frock.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/ASUS/AndroidStudioProjects/E-Commerce-Applicaiton/app/src/main/res/layout/activity_home.xml" value="0.264" />
-        <entry key="..\:/Users/ASUS/AndroidStudioProjects/E-Commerce-Applicaiton/app/src/main/res/layout/activity_main.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/ASUS/AndroidStudioProjects/E-Commerce-Applicaiton/app/src/main/res/layout/activity_menu.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/ASUS/AndroidStudioProjects/E-Commerce-Applicaiton/app/src/main/res/layout/activity_more_services.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/ASUS/AndroidStudioProjects/E-Commerce-Applicaiton/app/src/main/res/layout/activity_nav_header_menu.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/ASUS/AndroidStudioProjects/E-Commerce-Applicaiton/app/src/main/res/layout/activity_payment.xml" value="0.2" />
-        <entry key="..\:/Users/ASUS/AndroidStudioProjects/E-Commerce-Applicaiton/app/src/main/res/layout/activity_single_product.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/ASUS/AndroidStudioProjects/E-Commerce-Applicaiton/app/src/main/res/layout/nav_header_menu.xml" value="0.25416666666666665" />
-        <entry key="..\:/Users/ASUS/AndroidStudioProjects/E-Commerce-Applicaiton/app/src/main/res/menu/activity_main_drawer.xml" value="0.264" />
-        <entry key="..\:/Users/ASUS/AndroidStudioProjects/E-Commerce-Applicaiton/app/src/main/res/menu/menu.xml" value="0.25416666666666665" />
+        <entry key="..\:/MAD/app/src/main/res/layout/activity_notification_settings.xml" value="0.24635416666666668" />
+        <entry key="..\:/MAD/app/src/main/res/layout/activity_product_add.xml" value="0.2" />
+        <entry key="..\:/MAD/app/src/main/res/layout/activity_profile.xml" value="0.24635416666666668" />
+        <entry key="..\:/MAD/app/src/main/res/layout/activity_register.xml" value="0.24635416666666668" />
+        <entry key="..\:/MAD/app/src/main/res/layout/activity_reset_password.xml" value="0.24635416666666668" />
+        <entry key="..\:/MAD/app/src/main/res/layout/activity_sample.xml" value="0.152" />
+        <entry key="..\:/MAD/app/src/main/res/layout/activity_setting.xml" value="0.24635416666666668" />
+        <entry key="..\:/MAD/app/src/main/res/layout/activity_shoes.xml" value="0.24635416666666668" />
       </map>
     </option>
   </component>
