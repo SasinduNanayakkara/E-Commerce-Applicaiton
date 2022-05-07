@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.E_commerce_app">
         <activity
+            android:name=".update_new_item"
+            android:exported="false" />
+        <activity
             android:name=".sample"
             android:exported="false" />
         <activity
