@@ -222,7 +222,7 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <ImageView
-        android:id="@+id/imageView12"
+        android:id="@+id/CartImageIcon"
         android:layout_width="38dp"
         android:layout_height="38dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -234,13 +234,13 @@
         app:srcCompat="@drawable/cart_pic_white" />
 
     <ImageView
-        android:id="@+id/imageView13"
+        android:id="@+id/profileImageIcon"
         android:layout_width="38dp"
         android:layout_height="38dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.63"
-        app:layout_constraintStart_toEndOf="@+id/imageView12"
+        app:layout_constraintStart_toEndOf="@+id/CartImageIcon"
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout14"
         app:layout_constraintVertical_bias="0.87"
         app:srcCompat="@drawable/profile_pic_white" />
@@ -258,7 +258,7 @@
         app:layout_constraintVertical_bias="0.13">
 
         <ImageView
-            android:id="@+id/imageView16"
+            android:id="@+id/FrockImageIcon"
             android:layout_width="70dp"
             android:layout_height="70dp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -281,7 +281,7 @@
         app:layout_constraintVertical_bias="0.13">
 
         <ImageView
-            android:id="@+id/imageView17"
+            android:id="@+id/TShirtImageIcon"
             android:layout_width="70dp"
             android:layout_height="70dp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -303,7 +303,7 @@
         app:layout_constraintVertical_bias="0.13">
 
         <ImageView
-            android:id="@+id/imageView18"
+            android:id="@+id/TrouserImageIcon"
             android:layout_width="70dp"
             android:layout_height="70dp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -326,7 +326,7 @@
         app:layout_constraintVertical_bias="0.16000003">
 
         <ImageView
-            android:id="@+id/imageView19"
+            android:id="@+id/JewelleryImageIcon"
             android:layout_width="60dp"
             android:layout_height="60dp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -350,7 +350,7 @@
         app:layout_constraintVertical_bias="0.13999999">
 
         <ImageView
-            android:id="@+id/imageView22"
+            android:id="@+id/ShoeImageIcon"
             android:layout_width="70dp"
             android:layout_height="70dp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -372,7 +372,7 @@
         app:layout_constraintVertical_bias="0.13">
 
         <ImageView
-            android:id="@+id/imageView21"
+            android:id="@+id/BagImageIcon"
             android:layout_width="60dp"
             android:layout_height="60dp"
             app:layout_constraintBottom_toBottomOf="parent"
