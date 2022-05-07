@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), shoes.class);
+                Intent intent = new Intent(getApplicationContext(), sample.class);
                 startActivity(intent);
             }
         });
