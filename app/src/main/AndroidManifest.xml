@@ -10,10 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.E_commerce_app">
         <activity
+            android:name=".trousers"
+            android:exported="false" />
+        <activity
             android:name=".update_new_item"
             android:exported="false" />
         <activity
-
             android:name=".shipping_address"
             android:exported="false" />
         <activity
