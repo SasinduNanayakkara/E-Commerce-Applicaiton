@@ -300,6 +300,8 @@
             android:layout_height="47dp"
             android:ems="10"
             android:inputType="textPersonName"
+            android:backgroundTint="@color/font_fill_color"
+            android:background="@drawable/layout_border"
             android:text="http://asia-honeybee.com/product/frock"
             android:textSize="14sp"
             app:layout_constraintBottom_toBottomOf="parent"
