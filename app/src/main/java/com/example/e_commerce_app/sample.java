@@ -37,13 +37,11 @@ public class sample extends AppCompatActivity {
                     shoeList.add(dataSnapshot.getValue().toString());
 
                 }
-                ArrayList<String> elements = new ArrayList<>();
 
 
-                sampleText.setText(elements.get(3));
+                sampleText.setText(shoeList.get(3));
 
                 adapter.notifyDataSetChanged();
-                final ArrayList<String> item = new ArrayList<>();
 
 
             }
