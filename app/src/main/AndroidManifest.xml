@@ -10,25 +10,30 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.E_commerce_app">
         <activity
-            android:name=".home"
+            android:name=".update_new_item"
             android:exported="false" />
         <activity
-            android:name=".payment"
+
+            android:name=".shipping_address"
             android:exported="false" />
         <activity
-            android:name=".frock"
+            android:name=".tshirts"
             android:exported="false" />
         <activity
-            android:name=".more_services"
+            android:name=".fragment_trouser"
             android:exported="false" />
         <activity
-            android:name=".contact_us"
+            android:name=".privacy_policy"
             android:exported="false" />
         <activity
-            android:name=".single_product"
+            android:name=".first"
             android:exported="false" />
         <activity
-            android:name=".about_us"
+            android:name=".sign_in"
+            android:name=".sample"
+            android:exported="false" />
+        <activity
+            android:name=".product_add"
             android:exported="false" />
         <activity
             android:name=".reset_password"
