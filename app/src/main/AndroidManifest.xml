@@ -10,6 +10,23 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.E_commerce_app">
         <activity
+
+            android:name=".shipping_address"
+            android:exported="false" />
+        <activity
+            android:name=".tshirts"
+            android:exported="false" />
+        <activity
+            android:name=".fragment_trouser"
+            android:exported="false" />
+        <activity
+            android:name=".privacy_policy"
+            android:exported="false" />
+        <activity
+            android:name=".first"
+            android:exported="false" />
+        <activity
+            android:name=".sign_in"
             android:name=".sample"
             android:exported="false" />
         <activity
