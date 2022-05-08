@@ -53,7 +53,9 @@ public class frock extends AppCompatActivity {
                     }
                 }
 
+                String[] itemName;
                 for(int i=0; i<frockList.size(); i++) {
+//                    itemName[i] = frockList.get(i).replaceAll("\\{", "").replaceAll("\\}", "").split(",");
 
                 }
 
