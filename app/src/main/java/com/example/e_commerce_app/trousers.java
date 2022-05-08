@@ -18,44 +18,41 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class frock extends AppCompatActivity {
-
-    ImageView frockImage1, frockImage2, frockImage3, frockImage4, homeIcon, cartIcon, profileIcon, backIcon;
-    TextView frockPrice1, frockPrice2, frockPrice3, frockPrice4;
+public class trousers extends AppCompatActivity {
+    ImageView trouserImage1, trouserImage2, trouserImage3, trouserImage4, home, cart, profile, back;
+    TextView trouserPrice1, trouserPrice2, trouserPrice3, trouserPrice4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_frock);
+        setContentView(R.layout.activity_trousers);
 
-        frockImage1 = findViewById(R.id.frockImage1);
-        frockImage2 = findViewById(R.id.frockImage2);
-        frockImage3 = findViewById(R.id.frockImage3);
-        frockImage4 = findViewById(R.id.frockImage4);
-        homeIcon = findViewById(R.id.frockHomeIcon);
-        cartIcon = findViewById(R.id.frockCartIcon);
-        profileIcon = findViewById(R.id.frockProfileIcon);
-        backIcon = findViewById(R.id.frockBackIcon);
-        frockPrice1 = findViewById(R.id.frockPrice1);
-        frockPrice2 = findViewById(R.id.frockPrice2);
-        frockPrice3 = findViewById(R.id.frockPrice3);
-        frockPrice4 = findViewById(R.id.frockPrice4);
+        trouserImage1 = findViewById(R.id.trouserImage1);
+        trouserImage2 = findViewById(R.id.trouserImage2);
+        trouserImage3 = findViewById(R.id.trouserImage3);
+        trouserImage4 = findViewById(R.id.trouserImage4);
+        home = findViewById(R.id.trouserHomeIcon);
+        cart = findViewById(R.id.trouserCartIcon);
+        profile = findViewById(R.id.trouserProfileIcon);
+        trouserPrice1 = findViewById(R.id.trouserPrice1);
+        trouserPrice2 = findViewById(R.id.trouserPrice2);
+        trouserPrice3 = findViewById(R.id.trouserPrice3);
+        trouserPrice4 = findViewById(R.id.trouserPrice4);
 
-        final ArrayList<String> frockList = new ArrayList<>();
+
+        final ArrayList<String> trouserList = new ArrayList<>();
 
         DatabaseReference reference = FirebaseDatabase.getInstance().getReference().child("honeyBeeDB").child("products");
         reference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for(DataSnapshot dataSnapshot: snapshot.getChildren()){
-                    if (((HashMap)(dataSnapshot.getValue())).get("category") == "Frocks") {
-                        frockList.add(dataSnapshot.getValue().toString());
+                    if (((HashMap)(dataSnapshot.getValue())).get("category") == "Trousers") {
+                        trouserList.add(dataSnapshot.getValue().toString());
                     }
                 }
 
-                String[] itemName;
-                for(int i=0; i<frockList.size(); i++) {
-//                    itemName[i] = frockList.get(i).replaceAll("\\{", "").replaceAll("\\}", "").split(",");
+                for(int i=0; i<trouserList.size(); i++) {
 
                 }
 
@@ -67,7 +64,8 @@ public class frock extends AppCompatActivity {
             }
         });
 
-        homeIcon.setOnClickListener(new View.OnClickListener() {
+
+        home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), com.example.e_commerce_app.home.class);
@@ -75,7 +73,7 @@ public class frock extends AppCompatActivity {
             }
         });
 
-        cartIcon.setOnClickListener(new View.OnClickListener() {
+        cart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), com.example.e_commerce_app.cart.class);
@@ -83,16 +81,13 @@ public class frock extends AppCompatActivity {
             }
         });
 
-        profileIcon.setOnClickListener(new View.OnClickListener() {
+        profile.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), com.example.e_commerce_app.profile.class);
                 startActivity(intent);
             }
         });
-
-
-
 
 
     }
