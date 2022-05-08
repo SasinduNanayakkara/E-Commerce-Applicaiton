@@ -18,43 +18,41 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class jewelry extends AppCompatActivity {
-
-    ImageView jImage1, jImage2, jImage3, jImage4, home, cart, back, profile;
-    TextView jPrice1, jPrice2, jPrice3, jPrice4;
+public class trousers extends AppCompatActivity {
+    ImageView trouserImage1, trouserImage2, trouserImage3, trouserImage4, home, cart, profile, back;
+    TextView trouserPrice1, trouserPrice2, trouserPrice3, trouserPrice4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_jewelry);
+        setContentView(R.layout.activity_trousers);
 
-        jImage1 = findViewById(R.id.jImage1);
-        jImage2 = findViewById(R.id.jImage2);
-        jImage3 = findViewById(R.id.jImage3);
-        jImage4 = findViewById(R.id.jImage4);
-        home = findViewById(R.id.jHome);
-        cart = findViewById(R.id.jCart);
-        profile = findViewById(R.id.jProfile);
-        back = findViewById(R.id.jBackIcon);
-        jPrice1 = findViewById(R.id.jPrice1);
-        jPrice2 = findViewById(R.id.jPrice2);
-        jPrice3 = findViewById(R.id.jPrice3);
-        jPrice4 = findViewById(R.id.jPrice4);
+        trouserImage1 = findViewById(R.id.trouserImage1);
+        trouserImage2 = findViewById(R.id.trouserImage2);
+        trouserImage3 = findViewById(R.id.trouserImage3);
+        trouserImage4 = findViewById(R.id.trouserImage4);
+        home = findViewById(R.id.trouserHomeIcon);
+        cart = findViewById(R.id.trouserCartIcon);
+        profile = findViewById(R.id.trouserProfileIcon);
+        trouserPrice1 = findViewById(R.id.trouserPrice1);
+        trouserPrice2 = findViewById(R.id.trouserPrice2);
+        trouserPrice3 = findViewById(R.id.trouserPrice3);
+        trouserPrice4 = findViewById(R.id.trouserPrice4);
 
 
-        final ArrayList<String> jList = new ArrayList<>();
+        final ArrayList<String> trouserList = new ArrayList<>();
 
         DatabaseReference reference = FirebaseDatabase.getInstance().getReference().child("honeyBeeDB").child("products");
         reference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for(DataSnapshot dataSnapshot: snapshot.getChildren()){
-                    if (((HashMap)(dataSnapshot.getValue())).get("category") == "Frocks") {
-                        jList.add(dataSnapshot.getValue().toString());
+                    if (((HashMap)(dataSnapshot.getValue())).get("category") == "Trousers") {
+                        trouserList.add(dataSnapshot.getValue().toString());
                     }
                 }
 
-                for(int i=0; i<jList.size(); i++) {
+                for(int i=0; i<trouserList.size(); i++) {
 
                 }
 
@@ -65,6 +63,7 @@ public class jewelry extends AppCompatActivity {
 
             }
         });
+
 
         home.setOnClickListener(new View.OnClickListener() {
             @Override
