@@ -20,6 +20,7 @@
         app:srcCompat="@drawable/back_btn_white" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout35"
         android:layout_width="383dp"
         android:layout_height="648dp"
         android:background="@drawable/layout_border"
@@ -32,7 +33,7 @@
         app:layout_constraintVertical_bias="0.807">
 
         <ImageView
-            android:id="@+id/imageView24"
+            android:id="@+id/itemImage"
             android:layout_width="325dp"
             android:layout_height="293dp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -43,7 +44,7 @@
             app:srcCompat="@drawable/frock1" />
 
         <TextView
-            android:id="@+id/textView39"
+            android:id="@+id/itemCode"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Item Code - 7812325"
@@ -52,11 +53,11 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView24"
+            app:layout_constraintTop_toBottomOf="@+id/itemImage"
             app:layout_constraintVertical_bias="0.06999999" />
 
         <TextView
-            android:id="@+id/textView40"
+            android:id="@+id/itemDescription"
             android:layout_width="300dp"
             android:layout_height="72dp"
             android:text="Summer Spring 2021 Women's Dresses Floral Pattern Boho Dress Vacation Beach Sexy Fashion Robes Clothes Casual Party Mini Dresses"
@@ -64,11 +65,11 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView39"
+            app:layout_constraintTop_toBottomOf="@+id/itemCode"
             app:layout_constraintVertical_bias="0.100000024" />
 
         <TextView
-            android:id="@+id/textView41"
+            android:id="@+id/itemPrice"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="LKR 1,055.53"
@@ -78,7 +79,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView40"
+            app:layout_constraintTop_toBottomOf="@+id/itemDescription"
             app:layout_constraintVertical_bias="0.0" />
 
         <TextView
@@ -92,7 +93,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.26"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView41"
+            app:layout_constraintTop_toBottomOf="@+id/itemPrice"
             app:layout_constraintVertical_bias="0.19" />
 
         <TextView
@@ -106,11 +107,11 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.52"
             app:layout_constraintStart_toEndOf="@+id/textView42"
-            app:layout_constraintTop_toBottomOf="@+id/textView41"
+            app:layout_constraintTop_toBottomOf="@+id/itemPrice"
             app:layout_constraintVertical_bias="0.19" />
 
         <Button
-            android:id="@+id/button8"
+            android:id="@+id/ItemCartBtn"
             android:layout_width="125dp"
             android:layout_height="39dp"
             android:background="@drawable/layout_border"
@@ -127,7 +128,7 @@
             app:layout_constraintTop_toBottomOf="@+id/textView42" />
 
         <Button
-            android:id="@+id/button9"
+            android:id="@+id/itemBuyNow"
             android:layout_width="125dp"
             android:layout_height="39dp"
             android:background="@drawable/layout_border"
@@ -140,8 +141,22 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.45"
-            app:layout_constraintStart_toEndOf="@+id/button8"
+            app:layout_constraintStart_toEndOf="@+id/ItemCartBtn"
             app:layout_constraintTop_toBottomOf="@+id/textView43" />
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/itemName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Summer T-shirt"
+        android:textColor="@color/bee_yellow"
+        android:textSize="34sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout35"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.23"
+        app:layout_constraintStart_toEndOf="@+id/imageView15"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
