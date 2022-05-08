@@ -55,6 +55,9 @@
             android:name=".shoes"
             android:exported="false" />
         <activity
+            android:name=".single_product"
+            android:exported="false" />
+        <activity
             android:name=".jewelry"
             android:exported="false" />
         <activity
