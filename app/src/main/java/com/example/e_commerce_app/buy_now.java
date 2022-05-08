@@ -74,8 +74,7 @@ public class buy_now extends AppCompatActivity {
                     vm.setQuantity(quantity);
                     vm.setPhoneNumber(phoneNumber);
 
-                    FirebaseDatabase.getInstance().getReference().child("honeyBeeDB").child("Orders").push().updateChildren(map);
-                    //Toast.makeText(buy_now.this, "Oder placed successfully", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(buy_now.this, "Oder placed successfully", Toast.LENGTH_SHORT).show();
 
                     Intent intent = new Intent(getApplicationContext(), activity_your_order.class);
                     intent.putExtra("obj",vm);
