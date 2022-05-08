@@ -74,6 +74,12 @@
             android:name=".buy_now"
             android:exported="false" />
         <activity
+            android:name=".payment"
+            android:exported="false" />
+        <activity
+            android:name=".activity_your_order"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
