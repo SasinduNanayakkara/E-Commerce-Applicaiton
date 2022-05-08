@@ -15,12 +15,11 @@ import java.util.HashMap;
 public class product_add extends AppCompatActivity {
     Button add;
     EditText ItemNameInput, ImageUrlInput, ItemCodeInput, DescriptionInput, PriceInput, CategoryInput, SizesInput;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_product_add);
 
+        setContentView(R.layout.activity_product_add);
         add = findViewById(R.id.NewProductAddButton);
         ItemNameInput = findViewById(R.id.ItemNameInput);
         ImageUrlInput = findViewById(R.id.ImageUrlInput);
@@ -29,7 +28,6 @@ public class product_add extends AppCompatActivity {
         PriceInput = findViewById(R.id.PriceInput);
         CategoryInput = findViewById(R.id.CategoryInput);
         SizesInput = findViewById(R.id.SizesInput);
-
 
         add.setOnClickListener(new View.OnClickListener() {
             @Override
