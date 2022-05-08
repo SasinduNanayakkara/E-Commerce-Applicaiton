@@ -76,6 +76,10 @@
             android:name=".buy_now"
             android:exported="false" />
         <activity
+            android:name=".payment"
+            android:exported="false" />
+        <activity
+            android:name=".activity_your_order"
             android:name=".sign_in"
             android:exported="false" />
         <activity

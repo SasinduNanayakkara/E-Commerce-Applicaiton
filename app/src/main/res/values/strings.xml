@@ -176,7 +176,7 @@
     <string name="card_num">Card Number</string>
     <string name="expiry_date">Expiry Date</string>
     <string name="cvv">CVV</string>
-    <string name="text33">Name</string>
+    <string name="text33">Cardholder Name</string>
     <string name="save_card">Save Card Details</string>
     <string name="pay">Pay</string>
 
