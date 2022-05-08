@@ -80,10 +80,12 @@
             android:exported="false" />
         <activity
             android:name=".activity_your_order"
+            android:name=".sign_in"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
             android:exported="true">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

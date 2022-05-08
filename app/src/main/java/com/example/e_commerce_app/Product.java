@@ -21,6 +21,10 @@ public class Product {
         this.size = size;
     }
 
+    public Product() {
+
+    }
+
     public String getItemName() {
         return itemName;
     }

@@ -191,7 +191,7 @@
             android:background="@drawable/layout_border"
             android:paddingLeft="50dp"
             android:paddingRight="50dp"
-            android:text="SIGN UP"
+            android:text="Register"
             android:textColor="@color/black"
             android:textSize="20sp"
             android:textStyle="bold"

@@ -47,7 +47,7 @@
         app:layout_constraintVertical_bias="1.0">
 
         <EditText
-            android:id="@+id/editTextTextPersonName7"
+            android:id="@+id/updateSize"
             android:layout_width="272dp"
             android:layout_height="43dp"
             android:background="@drawable/layout_border"
@@ -61,11 +61,11 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName3"
+            app:layout_constraintTop_toBottomOf="@+id/updateItemCode"
             app:layout_constraintVertical_bias="0.771" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName6"
+            android:id="@+id/updateCategory"
             android:layout_width="272dp"
             android:layout_height="43dp"
             android:background="@drawable/layout_border"
@@ -79,11 +79,11 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName3"
+            app:layout_constraintTop_toBottomOf="@+id/updateItemCode"
             app:layout_constraintVertical_bias="0.548" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName5"
+            android:id="@+id/updatePrice"
             android:layout_width="272dp"
             android:layout_height="43dp"
             android:background="@drawable/layout_border"
@@ -97,11 +97,11 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName3"
+            app:layout_constraintTop_toBottomOf="@+id/updateItemCode"
             app:layout_constraintVertical_bias="0.32" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName4"
+            android:id="@+id/updateDescription"
             android:layout_width="272dp"
             android:layout_height="43dp"
             android:background="@drawable/layout_border"
@@ -115,11 +115,11 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName3"
+            app:layout_constraintTop_toBottomOf="@+id/updateItemCode"
             app:layout_constraintVertical_bias="0.100000024" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName3"
+            android:id="@+id/updateItemCode"
             android:layout_width="272dp"
             android:layout_height="43dp"
             android:background="@drawable/layout_border"
@@ -133,7 +133,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2"
+            app:layout_constraintTop_toBottomOf="@+id/updateImageUrl"
             app:layout_constraintVertical_bias="0.06999999" />
 
         <TextView
@@ -150,7 +150,7 @@
             app:layout_constraintVertical_bias="0.050000012" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName2"
+            android:id="@+id/updateImageUrl"
             android:layout_width="272dp"
             android:layout_height="43dp"
             android:background="@drawable/layout_border"
@@ -260,11 +260,11 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.25"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="@+id/editTextTextPersonName6"
+            app:layout_constraintTop_toTopOf="@+id/updateCategory"
             app:layout_constraintVertical_bias="0.32999998" />
 
         <Button
-            android:id="@+id/button2"
+            android:id="@+id/updateItemBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/layout_border"
@@ -277,16 +277,20 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName7" />
+            app:layout_constraintTop_toBottomOf="@+id/updateSize" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName8"
-            android:layout_width="260dp"
+            android:id="@+id/updateItemName"
+            android:layout_width="272dp"
             android:layout_height="43dp"
+            android:background="@drawable/layout_border"
+            android:backgroundTint="@color/font_fill_color"
+            android:drawablePadding="10dp"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="Sleeve Design Belted Midi Dress"
-            android:textSize="14sp"
+            android:padding="10dp"
+            android:textColor="@color/white"
+            android:textSize="16sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.52"
@@ -294,96 +298,5 @@
             app:layout_constraintTop_toTopOf="@+id/editTextTextPersonName"
             app:layout_constraintVertical_bias="0.0" />
 
-        <EditText
-            android:id="@+id/editTextTextPersonName9"
-            android:layout_width="332dp"
-            android:layout_height="47dp"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:backgroundTint="@color/font_fill_color"
-            android:background="@drawable/layout_border"
-            android:text="http://asia-honeybee.com/product/frock"
-            android:textSize="14sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName"
-            app:layout_constraintVertical_bias="0.050000012" />
-
-        <EditText
-            android:id="@+id/editTextTextPersonName10"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:text="FR10232"
-            android:textSize="14sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.34"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName2"
-            app:layout_constraintVertical_bias="0.06999999" />
-
-        <EditText
-            android:id="@+id/editTextTextPersonName11"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:text="Soft and cozy, Imported"
-            android:textSize="14sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.34"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName3"
-            app:layout_constraintVertical_bias="0.100000024" />
-
-        <EditText
-            android:id="@+id/editTextTextPersonName12"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:text="LKR 2150.00"
-            android:textSize="14sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.34"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName4"
-            app:layout_constraintVertical_bias="0.13" />
-
-        <EditText
-            android:id="@+id/editTextTextPersonName13"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:text="Frocks"
-            android:textSize="14sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.35"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName5"
-            app:layout_constraintVertical_bias="0.19" />
-
-        <EditText
-            android:id="@+id/editTextTextPersonName14"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPersonName"
-            android:text="XS, S, M, L, XL, XXL"
-            android:textSize="14sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.35"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName6"
-            app:layout_constraintVertical_bias="0.32" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
