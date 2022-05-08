@@ -10,6 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.E_commerce_app">
         <activity
+            android:name=".cart"
+            android:exported="false" />
+        <activity
+            android:name=".contact_us"
+            android:exported="false" />
+        <activity
+            android:name=".payment"
+            android:exported="false" />
+        <activity
             android:name=".update_new_item"
             android:exported="false" />
         <activity
