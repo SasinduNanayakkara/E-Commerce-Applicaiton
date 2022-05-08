@@ -8,7 +8,7 @@
     tools:context=".frock">
 
     <ImageView
-        android:id="@+id/imageView25"
+        android:id="@+id/frockBackIcon"
         android:layout_width="38dp"
         android:layout_height="38dp"
         android:src="@drawable/back_btn_white"
@@ -30,7 +30,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.09"
-        app:layout_constraintStart_toEndOf="@+id/imageView25"
+        app:layout_constraintStart_toEndOf="@+id/frockBackIcon"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.01999998" />
 
@@ -43,11 +43,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.04"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView25"
+        app:layout_constraintTop_toBottomOf="@+id/frockBackIcon"
         app:layout_constraintVertical_bias="0.04000002">
 
         <ImageView
-            android:id="@+id/imageView27"
+            android:id="@+id/frockImage1"
             android:layout_width="199dp"
             android:layout_height="200dp"
             android:src="@drawable/frock1"
@@ -59,7 +59,7 @@
             app:layout_constraintVertical_bias="0.19999999" />
 
         <TextView
-            android:id="@+id/textView46"
+            android:id="@+id/frockPrice1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="LKR 1000.00"
@@ -69,7 +69,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView27" />
+            app:layout_constraintTop_toBottomOf="@+id/frockImage1" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -81,11 +81,11 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/constraintLayout15"
-        app:layout_constraintTop_toBottomOf="@+id/imageView25"
+        app:layout_constraintTop_toBottomOf="@+id/frockBackIcon"
         app:layout_constraintVertical_bias="0.04000002">
 
         <ImageView
-            android:id="@+id/imageView28"
+            android:id="@+id/frockImage2"
             android:layout_width="199dp"
             android:layout_height="200dp"
             android:src="@drawable/frock2"
@@ -96,7 +96,7 @@
             app:layout_constraintVertical_bias="0.26" />
 
         <TextView
-            android:id="@+id/textView48"
+            android:id="@+id/frockPrice2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="LKR 1000.00"
@@ -106,7 +106,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView28"
+            app:layout_constraintTop_toBottomOf="@+id/frockImage2"
             app:layout_constraintVertical_bias="0.41000003" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -123,7 +123,7 @@
         app:layout_constraintVertical_bias="0.19">
 
         <ImageView
-            android:id="@+id/imageView30"
+            android:id="@+id/frockImage3"
             android:layout_width="199dp"
             android:layout_height="200dp"
             android:src="@drawable/frock4"
@@ -134,7 +134,7 @@
             app:layout_constraintVertical_bias="0.09" />
 
         <TextView
-            android:id="@+id/textView49"
+            android:id="@+id/frockPrice3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="LKR 1000.00"
@@ -145,7 +145,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.43"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView30"
+            app:layout_constraintTop_toBottomOf="@+id/frockImage3"
             app:layout_constraintVertical_bias="0.3" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -160,7 +160,7 @@
         app:layout_constraintVertical_bias="0.18">
 
         <ImageView
-            android:id="@+id/imageView31"
+            android:id="@+id/frockImage4"
             android:layout_width="199dp"
             android:layout_height="200dp"
             android:src="@drawable/frock5"
@@ -172,7 +172,7 @@
             app:layout_constraintVertical_bias="0.07999998" />
 
         <TextView
-            android:id="@+id/textView50"
+            android:id="@+id/frockPrice4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="LKR 1000.00"
@@ -182,7 +182,7 @@
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/imageView31"
+            app:layout_constraintTop_toBottomOf="@+id/frockImage4"
             app:layout_constraintVertical_bias="0.37" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -197,7 +197,7 @@
         app:layout_constraintTop_toBottomOf="@+id/constraintLayout16">
 
         <ImageView
-            android:id="@+id/imageView33"
+            android:id="@+id/frockHomeIcon"
             android:layout_width="38dp"
             android:layout_height="38dp"
             android:src="@drawable/home_pic_white"
@@ -208,25 +208,25 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
-            android:id="@+id/imageView34"
+            android:id="@+id/frockCartIcon"
             android:layout_width="38dp"
             android:layout_height="38dp"
             android:src="@drawable/cart_pic_white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.32"
-            app:layout_constraintStart_toEndOf="@+id/imageView33"
+            app:layout_constraintStart_toEndOf="@+id/frockHomeIcon"
             app:layout_constraintTop_toTopOf="parent" />
 
         <ImageView
-            android:id="@+id/imageView35"
+            android:id="@+id/frockProfileIcon"
             android:layout_width="38dp"
             android:layout_height="38dp"
             android:src="@drawable/profile_pic_white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.58"
-            app:layout_constraintStart_toEndOf="@+id/imageView34"
+            app:layout_constraintStart_toEndOf="@+id/frockCartIcon"
             app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
