@@ -10,6 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.E_commerce_app">
         <activity
+            android:name=".cart"
+            android:exported="false" />
+        <activity
+            android:name=".contact_us"
+            android:exported="false" />
+        <activity
+            android:name=".payment"
+            android:exported="false" />
+        <activity
             android:name=".trousers"
             android:exported="false" />
         <activity
@@ -79,8 +88,16 @@
             android:name=".buy_now"
             android:exported="false" />
         <activity
+            android:name=".payment"
+            android:exported="false" />
+        <activity
+            android:name=".activity_your_order"
+            android:name=".sign_in"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
