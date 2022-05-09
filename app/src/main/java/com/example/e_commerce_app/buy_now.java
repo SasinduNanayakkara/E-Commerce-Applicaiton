@@ -1,5 +1,6 @@
 package com.example.e_commerce_app;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -11,6 +12,9 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.e_commerce_app.viewmodel.OrderViewModel;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 import java.io.Serializable;
@@ -19,11 +23,12 @@ import java.util.HashMap;
 public class buy_now extends AppCompatActivity {
     Button add;
     EditText YourNameInput, AddressInput, ProvinceInput, PostalCodeInput, ItemCodeInput, SizeInput, QuantityInput, PhoneNumberInput;
-
+    FirebaseDatabase db;
+    DatabaseReference reference;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getSupportActionBar().hide();
+        /*getSupportActionBar().hide();*/
         setContentView(R.layout.activity_buy_now);
 
         add = findViewById(R.id.PlaceYourOrderButton);
@@ -63,6 +68,8 @@ public class buy_now extends AppCompatActivity {
                     map.put("quantity", quantity);
                     map.put("phoneNumber", phoneNumber);
 
+
+
                     OrderViewModel vm = new OrderViewModel();
 
                     vm.setYourName(yourName);
@@ -74,6 +81,21 @@ public class buy_now extends AppCompatActivity {
                     vm.setQuantity(quantity);
                     vm.setPhoneNumber(phoneNumber);
 
+                    db = FirebaseDatabase.getInstance();
+                    reference = db.getReference("Orders");
+                    reference.child(yourName).setValue(vm).addOnCompleteListener(new OnCompleteListener<Void>() {
+                        @Override
+                        public void onComplete(@NonNull Task<Void> task) {
+                            YourNameInput.setText("");
+                            AddressInput.setText("");
+                            ProvinceInput.setText("");
+                            PostalCodeInput.setText("");
+                            ItemCodeInput.setText("");
+                            SizeInput.setText("");
+                            QuantityInput.setText("");
+                            PhoneNumberInput.setText("");
+                        }
+                    });
                     Toast.makeText(buy_now.this, "Oder placed successfully", Toast.LENGTH_SHORT).show();
 
                     Intent intent = new Intent(getApplicationContext(), activity_your_order.class);

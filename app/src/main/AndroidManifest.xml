@@ -78,6 +78,9 @@
         <activity
             android:name=".edit_profile"
             android:exported="false" />
+        <activity 
+            android:name=".chnage_order"
+            android:exported="false" />
         <activity
             android:name=".chnage_order"
             android:exported="false" />
@@ -88,6 +91,9 @@
             android:name=".buy_now"
             android:exported="false" />
         <activity
+            android:name=".activity_your_order"
+            android:exported="false" />
+      <activity
             android:name=".sign_in"
             android:exported="false" />
         <activity
