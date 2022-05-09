@@ -72,12 +72,10 @@
         <activity
             android:name=".edit_profile"
             android:exported="false" />
-        <activity
-            android:name=".chnage_order"
+        <activity android:name=".chnage_order"
             android:exported="false" />
-        <activity
-            android:name=".cart"
-            android:exported="false" />
+
+
         <activity
             android:name=".admin_product_view"
             android:exported="false" />
@@ -85,11 +83,9 @@
             android:name=".buy_now"
             android:exported="false" />
         <activity
-            android:name=".payment"
-            android:exported="false" />
-        <activity
             android:name=".activity_your_order"
             android:exported="false" />
+
         <activity
             android:name=".MainActivity"
             android:exported="true">
