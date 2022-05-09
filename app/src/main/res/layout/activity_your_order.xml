@@ -318,7 +318,7 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <ImageView
-        android:id="@+id/imageView23"
+        android:id="@+id/editbtn"
         android:layout_width="38dp"
         android:layout_height="38dp"
         app:layout_constraintBottom_toBottomOf="parent"
