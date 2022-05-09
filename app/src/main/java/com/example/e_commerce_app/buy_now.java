@@ -23,7 +23,7 @@ public class buy_now extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getSupportActionBar().hide();
+        /*getSupportActionBar().hide();*/
         setContentView(R.layout.activity_buy_now);
 
         add = findViewById(R.id.PlaceYourOrderButton);
