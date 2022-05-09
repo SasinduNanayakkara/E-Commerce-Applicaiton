@@ -8,7 +8,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -21,6 +24,8 @@ import java.util.HashMap;
 public class trousers extends AppCompatActivity {
     ImageView trouserImage1, trouserImage2, trouserImage3, trouserImage4, home, cart, profile, back;
     TextView trouserPrice1, trouserPrice2, trouserPrice3, trouserPrice4;
+    DatabaseReference reference;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,31 +44,140 @@ public class trousers extends AppCompatActivity {
         trouserPrice3 = findViewById(R.id.trouserPrice3);
         trouserPrice4 = findViewById(R.id.trouserPrice4);
 
+        String item = "Trousers";
 
-        final ArrayList<String> trouserList = new ArrayList<>();
+        readData(item);
 
-        DatabaseReference reference = FirebaseDatabase.getInstance().getReference().child("honeyBeeDB").child("products");
-        reference.addValueEventListener(new ValueEventListener() {
+        trouserImage1.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                for(DataSnapshot dataSnapshot: snapshot.getChildren()){
-                    if (((HashMap)(dataSnapshot.getValue())).get("category") == "Trousers") {
-                        trouserList.add(dataSnapshot.getValue().toString());
+            public void onClick(View view) {
+                reference = FirebaseDatabase.getInstance().getReference("Products");
+                reference.child(item).get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull Task<DataSnapshot> task) {
+                        if (task.isSuccessful()) {
+                            DataSnapshot dataSnapshot = task.getResult();
+                            Product product = new Product();
+
+                            product.setItemName(String.valueOf(dataSnapshot.child("T100").child("itemName").getValue()));
+                            product.setItemCode(String.valueOf(dataSnapshot.child("T100").child("itemCode").getValue()));
+                            product.setPrice(String.valueOf(dataSnapshot.child("T100").child("price").getValue()));
+                            product.setSize(String.valueOf(dataSnapshot.child("T100").child("size").getValue()));
+                            product.setDescription(String.valueOf(dataSnapshot.child("T100").child("description").getValue()));
+
+                            //productImage.setImageResource(R.drawable.frock1);
+                            Intent intent = new Intent(getApplicationContext(), admin_product_view.class);
+                            intent.putExtra("itemName", product.getItemName());
+                            intent.putExtra("itemCode", product.getItemCode());
+                            intent.putExtra("description", product.getDescription());
+                            intent.putExtra("price", product.getPrice());
+                            intent.putExtra("size", product.getSize());
+                            intent.putExtra("image", "tr1");
+                            startActivity(intent);
+
+                        }
                     }
-                }
-
-                for(int i=0; i<trouserList.size(); i++) {
-
-                }
-
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-
+                });
             }
         });
 
+        trouserImage2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                reference = FirebaseDatabase.getInstance().getReference("Products");
+                reference.child(item).get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull Task<DataSnapshot> task) {
+                        if (task.isSuccessful()) {
+                            DataSnapshot dataSnapshot = task.getResult();
+                            Product product = new Product();
+
+                            product.setItemName(String.valueOf(dataSnapshot.child("T101").child("itemName").getValue()));
+                            product.setItemCode(String.valueOf(dataSnapshot.child("T101").child("itemCode").getValue()));
+                            product.setPrice(String.valueOf(dataSnapshot.child("T101").child("price").getValue()));
+                            product.setSize(String.valueOf(dataSnapshot.child("T101").child("size").getValue()));
+                            product.setDescription(String.valueOf(dataSnapshot.child("T101").child("description").getValue()));
+
+                            //productImage.setImageDrawable(getDrawable(R.drawable.frock2));
+                            Intent intent = new Intent(getApplicationContext(), admin_product_view.class);
+                            intent.putExtra("itemName", product.getItemName());
+                            intent.putExtra("itemCode", product.getItemCode());
+                            intent.putExtra("description", product.getDescription());
+                            intent.putExtra("price", product.getPrice());
+                            intent.putExtra("size", product.getSize());
+                            intent.putExtra("image", "tr2");
+                            startActivity(intent);
+                        }
+                    }
+                });
+            }
+        });
+
+        trouserImage3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                reference = FirebaseDatabase.getInstance().getReference("Products");
+                reference.child(item).get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull Task<DataSnapshot> task) {
+                        if (task.isSuccessful()) {
+                            DataSnapshot dataSnapshot = task.getResult();
+                            Product product = new Product();
+
+                            product.setItemName(String.valueOf(dataSnapshot.child("T102").child("itemName").getValue()));
+                            product.setItemCode(String.valueOf(dataSnapshot.child("T102").child("itemCode").getValue()));
+                            product.setPrice(String.valueOf(dataSnapshot.child("T102").child("price").getValue()));
+                            product.setSize(String.valueOf(dataSnapshot.child("T102").child("size").getValue()));
+                            product.setDescription(String.valueOf(dataSnapshot.child("T102").child("description").getValue()));
+
+
+                            Intent intent = new Intent(getApplicationContext(), admin_product_view.class);
+                            intent.putExtra("itemName", product.getItemName());
+                            intent.putExtra("itemCode", product.getItemCode());
+                            intent.putExtra("description", product.getDescription());
+                            intent.putExtra("price", product.getPrice());
+                            intent.putExtra("size", product.getSize());
+                            intent.putExtra("image", "tr3");
+
+                            startActivity(intent);
+                        }
+                    }
+                });
+            }
+        });
+
+        trouserImage4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                reference = FirebaseDatabase.getInstance().getReference("Products");
+                reference.child(item).get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
+                    @Override
+                    public void onComplete(@NonNull Task<DataSnapshot> task) {
+                        if (task.isSuccessful()) {
+                            DataSnapshot dataSnapshot = task.getResult();
+                            Product product = new Product();
+
+                            product.setItemName(String.valueOf(dataSnapshot.child("T103").child("itemName").getValue()));
+                            product.setItemCode(String.valueOf(dataSnapshot.child("T103").child("itemCode").getValue()));
+                            product.setPrice(String.valueOf(dataSnapshot.child("T103").child("price").getValue()));
+                            product.setSize(String.valueOf(dataSnapshot.child("T103").child("size").getValue()));
+                            product.setDescription(String.valueOf(dataSnapshot.child("T103").child("description").getValue()));
+
+                            //productImage.setImageDrawable(getDrawable(R.drawable.frock5));
+                            Intent intent = new Intent(getApplicationContext(), admin_product_view.class);
+                            intent.putExtra("itemName", product.getItemName());
+                            intent.putExtra("itemCode", product.getItemCode());
+                            intent.putExtra("description", product.getDescription());
+                            intent.putExtra("price", product.getPrice());
+                            intent.putExtra("size", product.getSize());
+                            intent.putExtra("image", "tr7");
+
+                            startActivity(intent);
+                        }
+                    }
+                });
+            }
+        });
 
         home.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -90,5 +204,26 @@ public class trousers extends AppCompatActivity {
         });
 
 
+    }
+
+    private void readData(String item) {
+        reference = FirebaseDatabase.getInstance().getReference("Products");
+        reference.child(item).get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
+            @Override
+            public void onComplete(@NonNull Task<DataSnapshot> task) {
+                if (task.isSuccessful()) {
+                    if (task.getResult().exists()) {
+                        DataSnapshot dataSnapshot = task.getResult();
+                        trouserPrice1.setText("LKR " + String.valueOf(dataSnapshot.child("T100").child("price").getValue()));
+                        trouserPrice2.setText("LKR" + String.valueOf(dataSnapshot.child("T101").child("price").getValue()));
+                        trouserPrice3.setText("LKR" + String.valueOf(dataSnapshot.child("T102").child("price").getValue()));
+                        trouserPrice4.setText("LKR" + String.valueOf(dataSnapshot.child("T103").child("price").getValue()));
+                    }
+                }
+                else {
+                    Toast.makeText(trousers.this, "Failed to read", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
     }
 }
