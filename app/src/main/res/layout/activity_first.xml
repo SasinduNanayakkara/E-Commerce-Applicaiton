@@ -8,7 +8,7 @@
     tools:context=".first">
 
     <Button
-        android:id="@+id/signInBtn"
+        android:id="@+id/btn"
         android:layout_width="265dp"
         android:layout_height="53dp"
         android:background="@drawable/layout_border"
