@@ -43,6 +43,9 @@
             android:name=".sample"
             android:exported="false" />
         <activity
+            android:name=".frock"
+            android:exported="false" />
+        <activity
             android:name=".product_add"
             android:exported="false" />
         <activity
@@ -79,21 +82,17 @@
             android:name=".chnage_order"
             android:exported="false" />
         <activity
-            android:name=".cart"
-            android:exported="false" />
-        <activity
             android:name=".admin_product_view"
             android:exported="false" />
         <activity
             android:name=".buy_now"
             android:exported="false" />
         <activity
-            android:name=".payment"
+            android:name=".sign_in"
             android:exported="false" />
         <activity
             android:name=".activity_your_order"
-            android:name=".sign_in"
-            android:exported="false" />
+            android:exported="false"/>
         <activity
             android:name=".MainActivity"
             android:exported="true">
