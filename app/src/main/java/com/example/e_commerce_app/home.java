@@ -36,6 +36,29 @@ public class home extends AppCompatActivity {
         cartIcon = findViewById(R.id.CartImageIcon);
         profileIcon = findViewById(R.id.profileImageIcon);
 
+        String registerName = getIntent().getStringExtra("registerName");
+        String registerEmail = getIntent().getStringExtra("registerEmail");
+        String registerPhoneNumber = getIntent().getStringExtra("registerPhoneNumber");
+        String registerAddress = getIntent().getStringExtra("registerAddress");
+        String registerCountry = getIntent().getStringExtra("registerCountry");
+        String  isAdmin = getIntent().getStringExtra("isAdmin");
+
+        profileIcon.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                Intent intent = new Intent(getApplicationContext(), profile.class);
+                intent.putExtra("registerName",  registerName);
+                intent.putExtra("registerEmail",  registerEmail);
+                intent.putExtra("registerPhoneNumber",  registerPhoneNumber);
+                intent.putExtra("registerAddress",  registerAddress);
+                intent.putExtra("registerCountry",  registerCountry);
+                intent.putExtra("isAdmin", isAdmin );
+
+
+                startActivity(intent);
+            }
+        });
+
         frockImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
