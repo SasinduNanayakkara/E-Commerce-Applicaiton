@@ -4,10 +4,14 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -21,6 +25,8 @@ public class update_new_item extends AppCompatActivity {
 
     EditText updateName, updateDescription, updateCode, updateImage, updatePrice, updateCategory, updateSize;
     Button updateBtn;
+
+    Task databaseReference;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,39 +42,55 @@ public class update_new_item extends AppCompatActivity {
         updateCategory = findViewById(R.id.updateCategory);
         updateBtn = findViewById(R.id.updateItemBtn);
 
-        final ArrayList<String> itemList = new ArrayList<>();
-        final ArrayAdapter adapter = new ArrayAdapter<String>(this, R.layout.activity_shoes, itemList);
+        Product product = new Product();
 
-        DatabaseReference reference = FirebaseDatabase.getInstance().getReference().child("honeyBeeDB").child("Products");
-        reference.addValueEventListener(new ValueEventListener() {
+        updateName.setText(product.getItemName());
+        updateCode.setText(product.getItemCode());
+        updateDescription.setText(product.getDescription());
+        updatePrice.setText(product.getPrice());
+        updateSize.setText(product.getSize());
+
+        updateBtn.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                for(DataSnapshot dataSnapshot: snapshot.getChildren()){
-                    System.out.println(((HashMap)(dataSnapshot.getValue())).get("category"));
-                    itemList.add(dataSnapshot.getValue().toString());
+            public void onClick(View view) {
+                String itemName = updateName.getText().toString();
+                String itemCode = updateCode.getText().toString();
+                String Description = updateDescription.getText().toString();
+                String price = updatePrice.getText().toString();
+                String size = updateSize.getText().toString();
 
-                }
-
-                HashMap<String, String> product = new HashMap<>();
-                for (String s : itemList.get(3).replaceAll("\\{", "").replaceAll("\\}", "").split(",")) {
-                    product.put(s.trim().split("=")[0], s.trim().split("=")[1]);
-                }
-
-                adapter.notifyDataSetChanged();
-
-                System.out.println(itemList.get(3));
-
-                System.out.println(product);
-            }
-
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-
+                updateData(itemName, itemCode, Description, price,size);
             }
         });
 
 
+    }
 
+    private void updateData(String itemName, String itemCode, String Description, String price, String size) {
+
+        HashMap product = new HashMap();
+        product.put("itemName", itemName);
+        product.put("itemCode", itemCode);
+        product.put("description", Description);
+        product.put("price", price);
+        product.put("size", size);
+
+        databaseReference = FirebaseDatabase.getInstance().getReference().child("honeyBeeDB").child("products").updateChildren(product).addOnCompleteListener(new OnCompleteListener() {
+            @Override
+            public void onComplete(@NonNull Task task) {
+                if (task.isSuccessful()) {
+                    updateName.setText("");
+                    updateCode.setText("");
+                    updateDescription.setText("");
+                    updatePrice.setText("");
+                    updateSize.setText("");
+
+                    Toast.makeText(update_new_item.this, "Data updated Successfully", Toast.LENGTH_SHORT).show();
+                }
+                else {
+                    Toast.makeText(update_new_item.this, "Failed ti update", Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
     }
 }
