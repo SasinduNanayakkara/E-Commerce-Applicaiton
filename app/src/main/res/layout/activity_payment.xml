@@ -61,7 +61,7 @@
             app:layout_constraintVertical_bias="0.23000002" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName2"
+            android:id="@+id/CardNumberInput"
             android:layout_width="350dp"
             android:layout_height="54dp"
             android:background="@drawable/layout_border"
@@ -95,7 +95,7 @@
             app:layout_constraintVertical_bias="0.42000002" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName6"
+            android:id="@+id/ExpiryDateInput"
             android:layout_width="150dp"
             android:layout_height="54dp"
             android:background="@drawable/layout_border"
@@ -130,7 +130,7 @@
             app:layout_constraintVertical_bias="0.42000002" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName7"
+            android:id="@+id/CVVInput"
             android:layout_width="150dp"
             android:layout_height="54dp"
             android:background="@drawable/layout_border"
@@ -165,7 +165,7 @@
             app:layout_constraintVertical_bias="0.61" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName8"
+            android:id="@+id/CardHolderNameInput"
             android:layout_width="350dp"
             android:layout_height="54dp"
             android:background="@drawable/layout_border"
@@ -199,7 +199,7 @@
             app:layout_constraintVertical_bias="0.83" />
 
         <Button
-            android:id="@+id/button7"
+            android:id="@+id/PayButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/layout_border"
@@ -224,10 +224,10 @@
             android:layout_marginBottom="8dp"
             app:layout_constraintBottom_toTopOf="@+id/textView34"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.14"
+            app:layout_constraintHorizontal_bias="0.154"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.24000001"
+            app:layout_constraintVertical_bias="0.244"
             app:srcCompat="@drawable/visa" />
 
         <ImageView

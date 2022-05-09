@@ -101,7 +101,7 @@
             app:layout_constraintVertical_bias="0.22000003" />
 
         <Button
-            android:id="@+id/cartButton"
+            android:id="@+id/cartButton1"
             android:layout_width="142dp"
             android:layout_height="37dp"
             android:background="@drawable/layout_border"
@@ -180,7 +180,7 @@
             app:srcCompat="@drawable/sh5" />
 
         <ImageView
-            android:id="@+id/imageView79"
+            android:id="@+id/cartDeleteIcon1"
             android:layout_width="38dp"
             android:layout_height="38dp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -202,11 +202,11 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.55"
             app:layout_constraintStart_toEndOf="@+id/imageView78"
-            app:layout_constraintTop_toBottomOf="@+id/imageView79"
+            app:layout_constraintTop_toBottomOf="@+id/cartDeleteIcon1"
             app:layout_constraintVertical_bias="0.050000012" />
 
         <TextView
-            android:id="@+id/textView90"
+            android:id="@+id/cartQuantity1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Quantity : 1"
@@ -231,11 +231,11 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.26"
             app:layout_constraintStart_toEndOf="@+id/imageView78"
-            app:layout_constraintTop_toBottomOf="@+id/textView90"
+            app:layout_constraintTop_toBottomOf="@+id/cartQuantity1"
             app:layout_constraintVertical_bias="0.110000014" />
 
         <Button
-            android:id="@+id/button15"
+            android:id="@+id/cartButton2"
             android:layout_width="142dp"
             android:layout_height="37dp"
             android:background="@drawable/layout_border"
@@ -286,7 +286,7 @@
             app:srcCompat="@drawable/tr7" />
 
         <ImageView
-            android:id="@+id/imageView81"
+            android:id="@+id/cartDeleteIcon2"
             android:layout_width="38dp"
             android:layout_height="38dp"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -308,11 +308,11 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.66"
             app:layout_constraintStart_toEndOf="@+id/imageView80"
-            app:layout_constraintTop_toBottomOf="@+id/imageView81"
+            app:layout_constraintTop_toBottomOf="@+id/cartDeleteIcon2"
             app:layout_constraintVertical_bias="0.060000002" />
 
         <TextView
-            android:id="@+id/textView96"
+            android:id="@+id/cartQuantity2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Quantity : 1"
@@ -337,11 +337,11 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.25"
             app:layout_constraintStart_toEndOf="@+id/imageView80"
-            app:layout_constraintTop_toBottomOf="@+id/textView96"
+            app:layout_constraintTop_toBottomOf="@+id/cartQuantity2"
             app:layout_constraintVertical_bias="0.110000014" />
 
         <Button
-            android:id="@+id/button16"
+            android:id="@+id/cartButton3"
             android:layout_width="142dp"
             android:layout_height="37dp"
             android:background="@drawable/layout_border"

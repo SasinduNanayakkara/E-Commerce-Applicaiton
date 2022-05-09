@@ -46,7 +46,7 @@
         app:layout_constraintVertical_bias="0.68">
 
         <EditText
-            android:id="@+id/editTextTextPersonName10"
+            android:id="@+id/ShippingAddress"
             android:layout_width="350dp"
             android:layout_height="150dp"
             android:background="@drawable/layout_border"
@@ -79,7 +79,7 @@
             app:srcCompat="@drawable/location_icon" />
 
         <TextView
-            android:id="@+id/textView52"
+            android:id="@+id/NameN"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/text36"
@@ -93,7 +93,7 @@
             app:layout_constraintVertical_bias="0.35000002" />
 
         <TextView
-            android:id="@+id/textView53"
+            android:id="@+id/Address1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/text37"
@@ -107,7 +107,7 @@
             app:layout_constraintVertical_bias="0.41000003" />
 
         <TextView
-            android:id="@+id/textView54"
+            android:id="@+id/Address2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/text38"
@@ -121,7 +121,7 @@
             app:layout_constraintVertical_bias="0.47000003" />
 
         <Button
-            android:id="@+id/button10"
+            android:id="@+id/EditAddressButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/layout_border"
