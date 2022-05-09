@@ -26,15 +26,10 @@ import com.google.firebase.database.ValueEventListener;
 public class profile extends AppCompatActivity {
 
     String userId;
-
     TextView textView4,textView6,textView8,textView10,textView12;
-
     // TextView email;
-
     Button button,button13;
-
     DatabaseReference dbRef;
-
     ProgressDialog spinner;
 
 
@@ -70,10 +65,6 @@ public class profile extends AppCompatActivity {
                 button ();
             }
         });
-
-
-
-
 
     }
 
