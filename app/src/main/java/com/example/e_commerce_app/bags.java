@@ -75,6 +75,7 @@ public class bags extends AppCompatActivity {
                             intent.putExtra("price", product.getPrice());
                             intent.putExtra("size", product.getSize());
                             intent.putExtra("image", "bg1");
+                            intent.putExtra("category", item);
                             startActivity(intent);
 
                         }
@@ -107,6 +108,8 @@ public class bags extends AppCompatActivity {
                             intent.putExtra("price", product.getPrice());
                             intent.putExtra("size", product.getSize());
                             intent.putExtra("image", "bg2");
+                            intent.putExtra("category", item);
+
                             startActivity(intent);
                         }
                     }
@@ -138,6 +141,7 @@ public class bags extends AppCompatActivity {
                             intent.putExtra("price", product.getPrice());
                             intent.putExtra("size", product.getSize());
                             intent.putExtra("image", "bg5");
+                            intent.putExtra("category", item);
 
                             startActivity(intent);
                         }
@@ -170,7 +174,8 @@ public class bags extends AppCompatActivity {
                             intent.putExtra("description", product.getDescription());
                             intent.putExtra("price", product.getPrice());
                             intent.putExtra("size", product.getSize());
-                            intent.putExtra("image", "bg8");
+                            intent.putExtra("image", "bg8");                               intent.putExtra("category", item);
+                            intent.putExtra("category", item);
 
                             startActivity(intent);
                         }
