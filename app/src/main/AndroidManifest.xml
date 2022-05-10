@@ -19,10 +19,12 @@
             android:name=".payment"
             android:exported="false" />
         <activity
+            android:name=".trousers"
+            android:exported="false" />
+        <activity
             android:name=".update_new_item"
             android:exported="false" />
         <activity
-
             android:name=".shipping_address"
             android:exported="false" />
         <activity
@@ -39,6 +41,9 @@
             android:exported="false" />
         <activity
             android:name=".sample"
+            android:exported="false" />
+        <activity
+            android:name=".frock"
             android:exported="false" />
         <activity
             android:name=".product_add"
@@ -62,6 +67,9 @@
             android:name=".shoes"
             android:exported="false" />
         <activity
+            android:name=".single_product"
+            android:exported="false" />
+        <activity
             android:name=".jewelry"
             android:exported="false" />
         <activity
@@ -70,11 +78,11 @@
         <activity
             android:name=".edit_profile"
             android:exported="false" />
-        <activity
+        <activity 
             android:name=".chnage_order"
             android:exported="false" />
         <activity
-            android:name=".cart"
+            android:name=".chnage_order"
             android:exported="false" />
         <activity
             android:name=".admin_product_view"
@@ -83,8 +91,18 @@
             android:name=".buy_now"
             android:exported="false" />
         <activity
+            android:name=".activity_your_order"
+            android:exported="false" />
+      <activity
+            android:name=".sign_in"
+            android:exported="false" />
+        <activity
+            android:name=".activity_your_order"
+            android:exported="false"/>
+        <activity
             android:name=".MainActivity"
             android:exported="true">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

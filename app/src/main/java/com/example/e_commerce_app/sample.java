@@ -14,6 +14,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class sample extends AppCompatActivity {
     TextView sampleText;
@@ -34,18 +35,22 @@ public class sample extends AppCompatActivity {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 for(DataSnapshot dataSnapshot: snapshot.getChildren()){
+                    System.out.println(((HashMap)(dataSnapshot.getValue())).get("category"));
                     shoeList.add(dataSnapshot.getValue().toString());
 
                 }
-                ArrayList<String> elements = new ArrayList<>();
 
-
-                sampleText.setText(elements.get(3));
+                HashMap<String, String> product = new HashMap<>();
+                for (String s : shoeList.get(3).replaceAll("\\{", "").replaceAll("\\}", "").split(",")) {
+                    product.put(s.trim().split("=")[0], s.trim().split("=")[1]);
+                }
+                sampleText.setText(product.get("category"));
 
                 adapter.notifyDataSetChanged();
-                final ArrayList<String> item = new ArrayList<>();
 
+                System.out.println(shoeList.get(3));
 
+                System.out.println(product);
             }
 
 

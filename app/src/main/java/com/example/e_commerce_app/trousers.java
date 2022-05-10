@@ -21,36 +21,34 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.HashMap;
 
-public class jewelry extends AppCompatActivity {
-
-    ImageView jImage1, jImage2, jImage3, jImage4, home, cart, back, profile;
-    TextView jPrice1, jPrice2, jPrice3, jPrice4;
+public class trousers extends AppCompatActivity {
+    ImageView trouserImage1, trouserImage2, trouserImage3, trouserImage4, home, cart, profile, back;
+    TextView trouserPrice1, trouserPrice2, trouserPrice3, trouserPrice4;
     DatabaseReference reference;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_jewelry);
+        setContentView(R.layout.activity_trousers);
 
-        jImage1 = findViewById(R.id.jImage1);
-        jImage2 = findViewById(R.id.jImage2);
-        jImage3 = findViewById(R.id.jImage3);
-        jImage4 = findViewById(R.id.jImage4);
-        home = findViewById(R.id.jHome);
-        cart = findViewById(R.id.jCart);
-        profile = findViewById(R.id.jProfile);
-        back = findViewById(R.id.jBackIcon);
-        jPrice1 = findViewById(R.id.jPrice1);
-        jPrice2 = findViewById(R.id.jPrice2);
-        jPrice3 = findViewById(R.id.jPrice3);
-        jPrice4 = findViewById(R.id.jPrice4);
+        trouserImage1 = findViewById(R.id.trouserImage1);
+        trouserImage2 = findViewById(R.id.trouserImage2);
+        trouserImage3 = findViewById(R.id.trouserImage3);
+        trouserImage4 = findViewById(R.id.trouserImage4);
+        home = findViewById(R.id.trouserHomeIcon);
+        cart = findViewById(R.id.trouserCartIcon);
+        profile = findViewById(R.id.trouserProfileIcon);
+        trouserPrice1 = findViewById(R.id.trouserPrice1);
+        trouserPrice2 = findViewById(R.id.trouserPrice2);
+        trouserPrice3 = findViewById(R.id.trouserPrice3);
+        trouserPrice4 = findViewById(R.id.trouserPrice4);
 
-        String item = "Jewelery";
+        String item = "Trousers";
 
         readData(item);
 
-        jImage1.setOnClickListener(new View.OnClickListener() {
+        trouserImage1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 reference = FirebaseDatabase.getInstance().getReference("Products");
@@ -61,11 +59,11 @@ public class jewelry extends AppCompatActivity {
                             DataSnapshot dataSnapshot = task.getResult();
                             Product product = new Product();
 
-                            product.setItemName(String.valueOf(dataSnapshot.child("J100").child("itemName").getValue()));
-                            product.setItemCode(String.valueOf(dataSnapshot.child("J100").child("itemCode").getValue()));
-                            product.setPrice(String.valueOf(dataSnapshot.child("J100").child("price").getValue()));
-                            product.setSize(String.valueOf(dataSnapshot.child("J100").child("size").getValue()));
-                            product.setDescription(String.valueOf(dataSnapshot.child("J100").child("description").getValue()));
+                            product.setItemName(String.valueOf(dataSnapshot.child("T100").child("itemName").getValue()));
+                            product.setItemCode(String.valueOf(dataSnapshot.child("T100").child("itemCode").getValue()));
+                            product.setPrice(String.valueOf(dataSnapshot.child("T100").child("price").getValue()));
+                            product.setSize(String.valueOf(dataSnapshot.child("T100").child("size").getValue()));
+                            product.setDescription(String.valueOf(dataSnapshot.child("T100").child("description").getValue()));
 
                             //productImage.setImageResource(R.drawable.frock1);
                             Intent intent = new Intent(getApplicationContext(), admin_product_view.class);
@@ -74,7 +72,7 @@ public class jewelry extends AppCompatActivity {
                             intent.putExtra("description", product.getDescription());
                             intent.putExtra("price", product.getPrice());
                             intent.putExtra("size", product.getSize());
-                            intent.putExtra("image", "j1");
+                            intent.putExtra("image", "tr1");
                             startActivity(intent);
 
                         }
@@ -83,7 +81,7 @@ public class jewelry extends AppCompatActivity {
             }
         });
 
-        jImage2.setOnClickListener(new View.OnClickListener() {
+        trouserImage2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 reference = FirebaseDatabase.getInstance().getReference("Products");
@@ -94,11 +92,11 @@ public class jewelry extends AppCompatActivity {
                             DataSnapshot dataSnapshot = task.getResult();
                             Product product = new Product();
 
-                            product.setItemName(String.valueOf(dataSnapshot.child("J101").child("itemName").getValue()));
-                            product.setItemCode(String.valueOf(dataSnapshot.child("J101").child("itemCode").getValue()));
-                            product.setPrice(String.valueOf(dataSnapshot.child("J101").child("price").getValue()));
-                            product.setSize(String.valueOf(dataSnapshot.child("J101").child("size").getValue()));
-                            product.setDescription(String.valueOf(dataSnapshot.child("J101").child("description").getValue()));
+                            product.setItemName(String.valueOf(dataSnapshot.child("T101").child("itemName").getValue()));
+                            product.setItemCode(String.valueOf(dataSnapshot.child("T101").child("itemCode").getValue()));
+                            product.setPrice(String.valueOf(dataSnapshot.child("T101").child("price").getValue()));
+                            product.setSize(String.valueOf(dataSnapshot.child("T101").child("size").getValue()));
+                            product.setDescription(String.valueOf(dataSnapshot.child("T101").child("description").getValue()));
 
                             //productImage.setImageDrawable(getDrawable(R.drawable.frock2));
                             Intent intent = new Intent(getApplicationContext(), admin_product_view.class);
@@ -107,7 +105,7 @@ public class jewelry extends AppCompatActivity {
                             intent.putExtra("description", product.getDescription());
                             intent.putExtra("price", product.getPrice());
                             intent.putExtra("size", product.getSize());
-                            intent.putExtra("image", "j7");
+                            intent.putExtra("image", "tr2");
                             startActivity(intent);
                         }
                     }
@@ -115,7 +113,7 @@ public class jewelry extends AppCompatActivity {
             }
         });
 
-        jImage3.setOnClickListener(new View.OnClickListener() {
+        trouserImage3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 reference = FirebaseDatabase.getInstance().getReference("Products");
@@ -126,11 +124,11 @@ public class jewelry extends AppCompatActivity {
                             DataSnapshot dataSnapshot = task.getResult();
                             Product product = new Product();
 
-                            product.setItemName(String.valueOf(dataSnapshot.child("J102").child("itemName").getValue()));
-                            product.setItemCode(String.valueOf(dataSnapshot.child("J102").child("itemCode").getValue()));
-                            product.setPrice(String.valueOf(dataSnapshot.child("J102").child("price").getValue()));
-                            product.setSize(String.valueOf(dataSnapshot.child("J102").child("size").getValue()));
-                            product.setDescription(String.valueOf(dataSnapshot.child("J102").child("description").getValue()));
+                            product.setItemName(String.valueOf(dataSnapshot.child("T102").child("itemName").getValue()));
+                            product.setItemCode(String.valueOf(dataSnapshot.child("T102").child("itemCode").getValue()));
+                            product.setPrice(String.valueOf(dataSnapshot.child("T102").child("price").getValue()));
+                            product.setSize(String.valueOf(dataSnapshot.child("T102").child("size").getValue()));
+                            product.setDescription(String.valueOf(dataSnapshot.child("T102").child("description").getValue()));
 
 
                             Intent intent = new Intent(getApplicationContext(), admin_product_view.class);
@@ -139,7 +137,7 @@ public class jewelry extends AppCompatActivity {
                             intent.putExtra("description", product.getDescription());
                             intent.putExtra("price", product.getPrice());
                             intent.putExtra("size", product.getSize());
-                            intent.putExtra("image", "j4");
+                            intent.putExtra("image", "tr3");
 
                             startActivity(intent);
                         }
@@ -148,7 +146,7 @@ public class jewelry extends AppCompatActivity {
             }
         });
 
-        jImage4.setOnClickListener(new View.OnClickListener() {
+        trouserImage4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 reference = FirebaseDatabase.getInstance().getReference("Products");
@@ -159,11 +157,11 @@ public class jewelry extends AppCompatActivity {
                             DataSnapshot dataSnapshot = task.getResult();
                             Product product = new Product();
 
-                            product.setItemName(String.valueOf(dataSnapshot.child("J103").child("itemName").getValue()));
-                            product.setItemCode(String.valueOf(dataSnapshot.child("J103").child("itemCode").getValue()));
-                            product.setPrice(String.valueOf(dataSnapshot.child("J103").child("price").getValue()));
-                            product.setSize(String.valueOf(dataSnapshot.child("J103").child("size").getValue()));
-                            product.setDescription(String.valueOf(dataSnapshot.child("J103").child("description").getValue()));
+                            product.setItemName(String.valueOf(dataSnapshot.child("T103").child("itemName").getValue()));
+                            product.setItemCode(String.valueOf(dataSnapshot.child("T103").child("itemCode").getValue()));
+                            product.setPrice(String.valueOf(dataSnapshot.child("T103").child("price").getValue()));
+                            product.setSize(String.valueOf(dataSnapshot.child("T103").child("size").getValue()));
+                            product.setDescription(String.valueOf(dataSnapshot.child("T103").child("description").getValue()));
 
                             //productImage.setImageDrawable(getDrawable(R.drawable.frock5));
                             Intent intent = new Intent(getApplicationContext(), admin_product_view.class);
@@ -172,12 +170,20 @@ public class jewelry extends AppCompatActivity {
                             intent.putExtra("description", product.getDescription());
                             intent.putExtra("price", product.getPrice());
                             intent.putExtra("size", product.getSize());
-                            intent.putExtra("image", "j5");
+                            intent.putExtra("image", "tr7");
 
                             startActivity(intent);
                         }
                     }
                 });
+            }
+        });
+
+        home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), com.example.e_commerce_app.home.class);
+                startActivity(intent);
             }
         });
 
@@ -208,14 +214,14 @@ public class jewelry extends AppCompatActivity {
                 if (task.isSuccessful()) {
                     if (task.getResult().exists()) {
                         DataSnapshot dataSnapshot = task.getResult();
-                        jPrice1.setText("LKR " + String.valueOf(dataSnapshot.child("J100").child("price").getValue()));
-                        jPrice2.setText("LKR" + String.valueOf(dataSnapshot.child("J101").child("price").getValue()));
-                        jPrice3.setText("LKR" + String.valueOf(dataSnapshot.child("J102").child("price").getValue()));
-                        jPrice4.setText("LKR" + String.valueOf(dataSnapshot.child("J103").child("price").getValue()));
+                        trouserPrice1.setText("LKR " + String.valueOf(dataSnapshot.child("T100").child("price").getValue()));
+                        trouserPrice2.setText("LKR" + String.valueOf(dataSnapshot.child("T101").child("price").getValue()));
+                        trouserPrice3.setText("LKR" + String.valueOf(dataSnapshot.child("T102").child("price").getValue()));
+                        trouserPrice4.setText("LKR" + String.valueOf(dataSnapshot.child("T103").child("price").getValue()));
                     }
                 }
                 else {
-                    Toast.makeText(jewelry.this, "Failed to read", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(trousers.this, "Failed to read", Toast.LENGTH_SHORT).show();
                 }
             }
         });
