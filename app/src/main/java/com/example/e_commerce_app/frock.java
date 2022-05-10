@@ -77,6 +77,7 @@ public class frock extends AppCompatActivity {
                             intent.putExtra("price", product.getPrice());
                             intent.putExtra("size", product.getSize());
                             intent.putExtra("image", "frock1");
+                            intent.putExtra("category", item);
                             startActivity(intent);
 
                         }
@@ -110,7 +111,9 @@ public class frock extends AppCompatActivity {
                             intent.putExtra("description", product.getDescription());
                             intent.putExtra("price", product.getPrice());
                             intent.putExtra("size", product.getSize());
-                            intent.putExtra("image", "frock2");
+                            intent.putExtra("image", "frock2");                            intent.putExtra("category", item);
+                            intent.putExtra("category", item);
+
                             startActivity(intent);
                         }
                     }
@@ -144,6 +147,7 @@ public class frock extends AppCompatActivity {
                             intent.putExtra("price", product.getPrice());
                             intent.putExtra("size", product.getSize());
                             intent.putExtra("image", "frock4");
+                            intent.putExtra("category", item);
 
                             startActivity(intent);
                         }
@@ -178,6 +182,7 @@ public class frock extends AppCompatActivity {
                             intent.putExtra("price", product.getPrice());
                             intent.putExtra("size", product.getSize());
                             intent.putExtra("image", "frock5");
+                            intent.putExtra("category", item);
 
                             startActivity(intent);
                         }
