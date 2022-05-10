@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Intent intent = new Intent(getApplicationContext(), jewelry.class);
+                Intent intent = new Intent(getApplicationContext(), shipping_address.class);
                 startActivity(intent);
             }
         });
