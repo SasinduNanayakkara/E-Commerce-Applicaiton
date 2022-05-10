@@ -395,7 +395,7 @@
         app:srcCompat="@drawable/home_pic" />
 
     <Button
-        android:id="@+id/button5"
+        android:id="@+id/ShippingInfo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/layout_border"
