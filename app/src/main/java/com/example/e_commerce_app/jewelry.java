@@ -75,6 +75,8 @@ public class jewelry extends AppCompatActivity {
                             intent.putExtra("price", product.getPrice());
                             intent.putExtra("size", product.getSize());
                             intent.putExtra("image", "j1");
+                            intent.putExtra("category", item);
+
                             startActivity(intent);
 
                         }
@@ -108,6 +110,8 @@ public class jewelry extends AppCompatActivity {
                             intent.putExtra("price", product.getPrice());
                             intent.putExtra("size", product.getSize());
                             intent.putExtra("image", "j7");
+                            intent.putExtra("category", item);
+
                             startActivity(intent);
                         }
                     }
@@ -140,6 +144,7 @@ public class jewelry extends AppCompatActivity {
                             intent.putExtra("price", product.getPrice());
                             intent.putExtra("size", product.getSize());
                             intent.putExtra("image", "j4");
+                            intent.putExtra("category", item);
 
                             startActivity(intent);
                         }
@@ -173,6 +178,7 @@ public class jewelry extends AppCompatActivity {
                             intent.putExtra("price", product.getPrice());
                             intent.putExtra("size", product.getSize());
                             intent.putExtra("image", "j5");
+                            intent.putExtra("category", item);
 
                             startActivity(intent);
                         }
