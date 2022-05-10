@@ -39,28 +39,6 @@ public class cart extends AppCompatActivity {
         cartDeleteIcon1 = findViewById(R.id.cartDeleteIcon1);
         cartDeleteIcon2 = findViewById(R.id.cartDeleteIcon2);
 
-        final ArrayList<String> cartItems = new ArrayList<>();
-        final ArrayAdapter adapter = new ArrayAdapter<String>(this, R.layout.activity_shoes, cartItems);
 
-        DatabaseReference reference = FirebaseDatabase.getInstance().getReference().child("honeyBeeDB").child("Products");
-        reference.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                for(DataSnapshot dataSnapshot: snapshot.getChildren()){
-                    cartItems.add(dataSnapshot.getValue().toString());
-
-                }
-                ArrayList<String> elements = new ArrayList<>();
-
-                adapter.notifyDataSetChanged();
-                final ArrayList<String> item = new ArrayList<>();
-
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-
-            }
-        });
     }
 }
