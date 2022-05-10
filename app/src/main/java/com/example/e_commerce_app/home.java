@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 
 import com.google.firebase.database.DataSnapshot;
@@ -21,12 +22,15 @@ import java.util.HashMap;
 public class home extends AppCompatActivity {
 
     ImageView frockImage, tShirtImage, trouserImage, jeweleryImage, shoeImage, bagImage, cartIcon, profileIcon;
+    Button add;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
 
+
+        add = findViewById(R.id.ShippingInfo);
         frockImage = findViewById(R.id.FrockImageIcon);
         tShirtImage = findViewById(R.id.TShirtImageIcon);
         trouserImage = findViewById(R.id.TrouserImageIcon);
@@ -106,6 +110,17 @@ public class home extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), shoes.class);
+                startActivity(intent);
+            }
+        });
+
+        add.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent  = new Intent(getApplicationContext(), shipping_address.class);
+                intent.putExtra("name", registerName);
+                intent.putExtra("address", registerAddress);
+                intent.putExtra("password", registerPassword);
                 startActivity(intent);
             }
         });
