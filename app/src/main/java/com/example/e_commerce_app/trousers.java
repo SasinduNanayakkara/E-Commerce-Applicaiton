@@ -73,6 +73,8 @@ public class trousers extends AppCompatActivity {
                             intent.putExtra("price", product.getPrice());
                             intent.putExtra("size", product.getSize());
                             intent.putExtra("image", "tr1");
+                            intent.putExtra("category", item);
+
                             startActivity(intent);
 
                         }
@@ -106,6 +108,8 @@ public class trousers extends AppCompatActivity {
                             intent.putExtra("price", product.getPrice());
                             intent.putExtra("size", product.getSize());
                             intent.putExtra("image", "tr2");
+                            intent.putExtra("category", item);
+
                             startActivity(intent);
                         }
                     }
@@ -138,6 +142,7 @@ public class trousers extends AppCompatActivity {
                             intent.putExtra("price", product.getPrice());
                             intent.putExtra("size", product.getSize());
                             intent.putExtra("image", "tr3");
+                            intent.putExtra("category", item);
 
                             startActivity(intent);
                         }
@@ -171,6 +176,7 @@ public class trousers extends AppCompatActivity {
                             intent.putExtra("price", product.getPrice());
                             intent.putExtra("size", product.getSize());
                             intent.putExtra("image", "tr7");
+                            intent.putExtra("category", item);
 
                             startActivity(intent);
                         }
