@@ -78,6 +78,7 @@ public class profile extends AppCompatActivity {
             String rAddress = getIntent().getStringExtra("registerAddress");
             String rCountry = getIntent().getStringExtra("registerCountry");
             String admin = getIntent().getStringExtra("isAdmin");
+            String rpassword = getIntent().getStringExtra("registerPassword");
 
             registerName.setText(rName);
             registerEmail.setText(rEmail);
@@ -87,11 +88,20 @@ public class profile extends AppCompatActivity {
 
 
 
+
             updatebutton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     Intent intent = new Intent(v.getContext(), edit_profile.class);
                     intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    System.out.println(rpassword);
+
+                    intent.putExtra("registerName",  rName);
+                    intent.putExtra("registerEmail",  rEmail);
+                    intent.putExtra("registerPhoneNumber",  rPhoneNumber);
+                    intent.putExtra("registerAddress",  rAddress);
+                    intent.putExtra("registerCountry",  rCountry);
+                    intent.putExtra("registerPassword", rpassword );
 
                     startActivity(intent);
                 }

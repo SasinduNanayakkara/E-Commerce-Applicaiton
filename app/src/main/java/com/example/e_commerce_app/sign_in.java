@@ -110,6 +110,8 @@ public class sign_in extends AppCompatActivity {
 
                                     String admin = new Boolean(r.isAdmin()).toString();
                                     intent.putExtra("isAdmin", admin);
+                                    intent.putExtra("registerPassword", text_password);
+                                    System.out.println(text_password);
 
                                     startActivity(intent);
                                 }

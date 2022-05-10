@@ -42,6 +42,7 @@ public class home extends AppCompatActivity {
         String registerAddress = getIntent().getStringExtra("registerAddress");
         String registerCountry = getIntent().getStringExtra("registerCountry");
         String  isAdmin = getIntent().getStringExtra("isAdmin");
+        String  registerPassword = getIntent().getStringExtra("registerPassword");
 
         profileIcon.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -53,6 +54,8 @@ public class home extends AppCompatActivity {
                 intent.putExtra("registerAddress",  registerAddress);
                 intent.putExtra("registerCountry",  registerCountry);
                 intent.putExtra("isAdmin", isAdmin );
+                intent.putExtra("registerPassword", registerPassword );
+                System.out.println("home"+registerPassword);
 
 
                 startActivity(intent);
