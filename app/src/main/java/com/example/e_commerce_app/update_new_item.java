@@ -3,6 +3,7 @@ package com.example.e_commerce_app;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -26,7 +27,7 @@ public class update_new_item extends AppCompatActivity {
     EditText updateName, updateDescription, updateCode, updateImage, updatePrice, updateCategory, updateSize;
     Button updateBtn;
 
-    Task databaseReference;
+    DatabaseReference databaseReference;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,31 +43,37 @@ public class update_new_item extends AppCompatActivity {
         updateCategory = findViewById(R.id.updateCategory);
         updateBtn = findViewById(R.id.updateItemBtn);
 
-        Product product = new Product();
 
-        updateName.setText(product.getItemName());
-        updateCode.setText(product.getItemCode());
-        updateDescription.setText(product.getDescription());
-        updatePrice.setText(product.getPrice());
-        updateSize.setText(product.getSize());
+        String itemName = getIntent().getStringExtra("itemName");
+        String itemCode = getIntent().getStringExtra("code");
+        String Description = getIntent().getStringExtra("description");
+        String price = getIntent().getStringExtra("price");
+        String size = getIntent().getStringExtra("size");
+        String category = getIntent().getStringExtra("category");
+        String image = getIntent().getStringExtra("image");
+
+        System.out.println(image);
+
+        updateName.setText(itemName);
+        updateCode.setText(itemCode);
+        updateDescription.setText(Description);
+        updatePrice.setText(price);
+        updateImage.setText(image);
+        updateSize.setText(size);
+        updateCategory.setText(category);
 
         updateBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String itemName = updateName.getText().toString();
-                String itemCode = updateCode.getText().toString();
-                String Description = updateDescription.getText().toString();
-                String price = updatePrice.getText().toString();
-                String size = updateSize.getText().toString();
 
-                updateData(itemName, itemCode, Description, price,size);
+                updateData(updateName.getText().toString(), updateCode.getText().toString(), updateDescription.getText().toString(), updatePrice.getText().toString(),updateSize.getText().toString(), updateImage.getText().toString(), updateCategory.getText().toString());
             }
         });
 
 
     }
 
-    private void updateData(String itemName, String itemCode, String Description, String price, String size) {
+    private void updateData(String itemName, String itemCode, String Description, String price, String size, String image, String category) {
 
         HashMap product = new HashMap();
         product.put("itemName", itemName);
@@ -74,8 +81,11 @@ public class update_new_item extends AppCompatActivity {
         product.put("description", Description);
         product.put("price", price);
         product.put("size", size);
+        product.put("category", category);
+        product.put("image", image);
 
-        databaseReference = FirebaseDatabase.getInstance().getReference().child("honeyBeeDB").child("products").updateChildren(product).addOnCompleteListener(new OnCompleteListener() {
+        databaseReference = FirebaseDatabase.getInstance().getReference("Products").child(category);
+        databaseReference.child(itemCode).updateChildren(product).addOnCompleteListener(new OnCompleteListener() {
             @Override
             public void onComplete(@NonNull Task task) {
                 if (task.isSuccessful()) {
@@ -84,11 +94,14 @@ public class update_new_item extends AppCompatActivity {
                     updateDescription.setText("");
                     updatePrice.setText("");
                     updateSize.setText("");
+                    updateImage.setText("");
+                    updateCategory.setText("");
 
                     Toast.makeText(update_new_item.this, "Data updated Successfully", Toast.LENGTH_SHORT).show();
+
                 }
                 else {
-                    Toast.makeText(update_new_item.this, "Failed ti update", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(update_new_item.this, "Failed to update", Toast.LENGTH_SHORT).show();
                 }
             }
         });
