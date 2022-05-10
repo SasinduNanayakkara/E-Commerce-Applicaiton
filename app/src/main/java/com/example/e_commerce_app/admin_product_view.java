@@ -1,5 +1,6 @@
 package com.example.e_commerce_app;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -9,6 +10,12 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 import java.io.InputStream;
 import java.net.MalformedURLException;
@@ -19,6 +26,7 @@ public class admin_product_view extends AppCompatActivity {
     ImageView productImage, back;
     TextView productName, productDescription, productPrice, productSize;
     Button updateBtn, deleteBtn;
+    DatabaseReference reference;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +48,8 @@ public class admin_product_view extends AppCompatActivity {
         productPrice.setText("LKR " + getIntent().getStringExtra("price"));
         productSize.setText(getIntent().getStringExtra("size"));
         String image = getIntent().getStringExtra("image");
+        String category = getIntent().getStringExtra("category");
+        String code = getIntent().getStringExtra("itemCode");
 
         if (image.equals("frock1")){
             productImage.setImageResource(R.drawable.frock1);
@@ -120,13 +130,34 @@ public class admin_product_view extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), update_new_item.class);
+
+                intent.putExtra("itemName",getIntent().getStringExtra("itemName") );
+                intent.putExtra("description", getIntent().getStringExtra("description"));
+                intent.putExtra("price", getIntent().getStringExtra("price"));
+                intent.putExtra("size", getIntent().getStringExtra("size"));
+                intent.putExtra("image",  getIntent().getStringExtra("image"));
+                intent.putExtra("category", getIntent().getStringExtra("category"));
+                intent.putExtra("code", getIntent().getStringExtra("itemCode"));
+
                 startActivity(intent);
             }
         });
         deleteBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //delete function
+                reference = FirebaseDatabase.getInstance().getReference("Products").child(category);
+                reference.child(code).removeValue().addOnCompleteListener(new OnCompleteListener<Void>() {
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+                        if (task.isSuccessful()) {
+                            Toast.makeText(admin_product_view.this, "Product deleted successfully", Toast.LENGTH_SHORT).show();
+                        }
+                        else {
+                            Toast.makeText(admin_product_view.this, "Product delete Failed", Toast.LENGTH_SHORT).show();
+
+                        }
+                    }
+                });
             }
         });
     }

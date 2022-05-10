@@ -47,6 +47,8 @@ public class frock extends AppCompatActivity {
         frockPrice4 = findViewById(R.id.frockPrice4);
         productImage = findViewById(R.id.productImage);
 
+        String isAdmin = getIntent().getStringExtra("isAdmin");
+        System.out.println("frock   " + isAdmin);
 
         String item = "Frocks";
 
@@ -69,16 +71,29 @@ public class frock extends AppCompatActivity {
                             product.setSize(String.valueOf(dataSnapshot.child("F100").child("size").getValue()));
                             product.setDescription(String.valueOf(dataSnapshot.child("F100").child("description").getValue()));
 
-                            //productImage.setImageResource(R.drawable.frock1);
-                            Intent intent = new Intent(getApplicationContext(), admin_product_view.class);
-                            intent.putExtra("itemName", product.getItemName());
-                            intent.putExtra("itemCode", product.getItemCode());
-                            intent.putExtra("description", product.getDescription());
-                            intent.putExtra("price", product.getPrice());
-                            intent.putExtra("size", product.getSize());
-                            intent.putExtra("image", "frock1");
-                            startActivity(intent);
+                            if (isAdmin.equals("false")) {
+                                Intent intent = new Intent(getApplicationContext(), single_product.class);
+                                intent.putExtra("itemName", product.getItemName());
+                                intent.putExtra("itemCode", product.getItemCode());
+                                intent.putExtra("description", product.getDescription());
+                                intent.putExtra("price", product.getPrice());
+                                intent.putExtra("size", product.getSize());
+                                intent.putExtra("image", "frock1");
+                                intent.putExtra("category", item);
+                                startActivity(intent);
 
+                            }
+                            else {
+                                Intent intent = new Intent(getApplicationContext(), admin_product_view.class);
+                                intent.putExtra("itemName", product.getItemName());
+                                intent.putExtra("itemCode", product.getItemCode());
+                                intent.putExtra("description", product.getDescription());
+                                intent.putExtra("price", product.getPrice());
+                                intent.putExtra("size", product.getSize());
+                                intent.putExtra("image", "frock1");
+                                intent.putExtra("category", item);
+                                startActivity(intent);
+                            }
                         }
                     }
                 });
@@ -103,15 +118,31 @@ public class frock extends AppCompatActivity {
                             product.setSize(String.valueOf(dataSnapshot.child("F101").child("size").getValue()));
                             product.setDescription(String.valueOf(dataSnapshot.child("F101").child("description").getValue()));
 
-                            //productImage.setImageDrawable(getDrawable(R.drawable.frock2));
-                            Intent intent = new Intent(getApplicationContext(), admin_product_view.class);
-                            intent.putExtra("itemName", product.getItemName());
-                            intent.putExtra("itemCode", product.getItemCode());
-                            intent.putExtra("description", product.getDescription());
-                            intent.putExtra("price", product.getPrice());
-                            intent.putExtra("size", product.getSize());
-                            intent.putExtra("image", "frock2");
-                            startActivity(intent);
+                            if (isAdmin.equals("false")) {
+                                Intent intent = new Intent(getApplicationContext(), single_product.class);
+                                intent.putExtra("itemName", product.getItemName());
+                                intent.putExtra("itemCode", product.getItemCode());
+                                intent.putExtra("description", product.getDescription());
+                                intent.putExtra("price", product.getPrice());
+                                intent.putExtra("size", product.getSize());
+                                intent.putExtra("image", "frock2");
+                                intent.putExtra("category", item);
+                                startActivity(intent);
+
+                            }
+                            else {
+                                Intent intent = new Intent(getApplicationContext(), admin_product_view.class);
+                                intent.putExtra("itemName", product.getItemName());
+                                intent.putExtra("itemCode", product.getItemCode());
+                                intent.putExtra("description", product.getDescription());
+                                intent.putExtra("price", product.getPrice());
+                                intent.putExtra("size", product.getSize());
+                                intent.putExtra("image", "frock2");
+                                intent.putExtra("category", item);
+                                intent.putExtra("category", item);
+
+                                startActivity(intent);
+                            }
                         }
                     }
                 });
@@ -136,16 +167,30 @@ public class frock extends AppCompatActivity {
                             product.setSize(String.valueOf(dataSnapshot.child("F102").child("size").getValue()));
                             product.setDescription(String.valueOf(dataSnapshot.child("F102").child("description").getValue()));
 
+                            if (isAdmin.equals("false")) {
+                                Intent intent = new Intent(getApplicationContext(), single_product.class);
+                                intent.putExtra("itemName", product.getItemName());
+                                intent.putExtra("itemCode", product.getItemCode());
+                                intent.putExtra("description", product.getDescription());
+                                intent.putExtra("price", product.getPrice());
+                                intent.putExtra("size", product.getSize());
+                                intent.putExtra("image", "frock4");
+                                intent.putExtra("category", item);
+                                startActivity(intent);
 
-                            Intent intent = new Intent(getApplicationContext(), admin_product_view.class);
-                            intent.putExtra("itemName", product.getItemName());
-                            intent.putExtra("itemCode", product.getItemCode());
-                            intent.putExtra("description", product.getDescription());
-                            intent.putExtra("price", product.getPrice());
-                            intent.putExtra("size", product.getSize());
-                            intent.putExtra("image", "frock4");
+                            }
+                            else {
+                                Intent intent = new Intent(getApplicationContext(), admin_product_view.class);
+                                intent.putExtra("itemName", product.getItemName());
+                                intent.putExtra("itemCode", product.getItemCode());
+                                intent.putExtra("description", product.getDescription());
+                                intent.putExtra("price", product.getPrice());
+                                intent.putExtra("size", product.getSize());
+                                intent.putExtra("image", "frock4");
+                                intent.putExtra("category", item);
 
-                            startActivity(intent);
+                                startActivity(intent);
+                            }
                         }
                     }
                 });
@@ -170,16 +215,30 @@ public class frock extends AppCompatActivity {
                             product.setSize(String.valueOf(dataSnapshot.child("F103").child("size").getValue()));
                             product.setDescription(String.valueOf(dataSnapshot.child("F103").child("description").getValue()));
 
-                            //productImage.setImageDrawable(getDrawable(R.drawable.frock5));
-                            Intent intent = new Intent(getApplicationContext(), admin_product_view.class);
-                            intent.putExtra("itemName", product.getItemName());
-                            intent.putExtra("itemCode", product.getItemCode());
-                            intent.putExtra("description", product.getDescription());
-                            intent.putExtra("price", product.getPrice());
-                            intent.putExtra("size", product.getSize());
-                            intent.putExtra("image", "frock5");
+                            if (isAdmin.equals("false")) {
+                                Intent intent = new Intent(getApplicationContext(), single_product.class);
+                                intent.putExtra("itemName", product.getItemName());
+                                intent.putExtra("itemCode", product.getItemCode());
+                                intent.putExtra("description", product.getDescription());
+                                intent.putExtra("price", product.getPrice());
+                                intent.putExtra("size", product.getSize());
+                                intent.putExtra("image", "frock5");
+                                intent.putExtra("category", item);
+                                startActivity(intent);
 
-                            startActivity(intent);
+                            }
+                            else {
+                                Intent intent = new Intent(getApplicationContext(), admin_product_view.class);
+                                intent.putExtra("itemName", product.getItemName());
+                                intent.putExtra("itemCode", product.getItemCode());
+                                intent.putExtra("description", product.getDescription());
+                                intent.putExtra("price", product.getPrice());
+                                intent.putExtra("size", product.getSize());
+                                intent.putExtra("image", "frock5");
+                                intent.putExtra("category", item);
+
+                                startActivity(intent);
+                            }
                         }
                     }
                 });

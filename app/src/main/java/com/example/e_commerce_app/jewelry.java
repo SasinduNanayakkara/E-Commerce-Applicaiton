@@ -46,6 +46,9 @@ public class jewelry extends AppCompatActivity {
         jPrice3 = findViewById(R.id.jPrice3);
         jPrice4 = findViewById(R.id.jPrice4);
 
+        String isAdmin = getIntent().getStringExtra("isAdmin");
+
+
         String item = "Jewelery";
 
         readData(item);
@@ -67,16 +70,30 @@ public class jewelry extends AppCompatActivity {
                             product.setSize(String.valueOf(dataSnapshot.child("J100").child("size").getValue()));
                             product.setDescription(String.valueOf(dataSnapshot.child("J100").child("description").getValue()));
 
-                            //productImage.setImageResource(R.drawable.frock1);
-                            Intent intent = new Intent(getApplicationContext(), admin_product_view.class);
-                            intent.putExtra("itemName", product.getItemName());
-                            intent.putExtra("itemCode", product.getItemCode());
-                            intent.putExtra("description", product.getDescription());
-                            intent.putExtra("price", product.getPrice());
-                            intent.putExtra("size", product.getSize());
-                            intent.putExtra("image", "j1");
-                            startActivity(intent);
+                            if (isAdmin.equals("false")) {
+                                Intent intent = new Intent(getApplicationContext(), single_product.class);
+                                intent.putExtra("itemName", product.getItemName());
+                                intent.putExtra("itemCode", product.getItemCode());
+                                intent.putExtra("description", product.getDescription());
+                                intent.putExtra("price", product.getPrice());
+                                intent.putExtra("size", product.getSize());
+                                intent.putExtra("image", "j1");
+                                intent.putExtra("category", item);
+                                startActivity(intent);
 
+                            }
+                            else {
+                                Intent intent = new Intent(getApplicationContext(), admin_product_view.class);
+                                intent.putExtra("itemName", product.getItemName());
+                                intent.putExtra("itemCode", product.getItemCode());
+                                intent.putExtra("description", product.getDescription());
+                                intent.putExtra("price", product.getPrice());
+                                intent.putExtra("size", product.getSize());
+                                intent.putExtra("image", "j1");
+                                intent.putExtra("category", item);
+
+                                startActivity(intent);
+                            }
                         }
                     }
                 });
@@ -100,15 +117,30 @@ public class jewelry extends AppCompatActivity {
                             product.setSize(String.valueOf(dataSnapshot.child("J101").child("size").getValue()));
                             product.setDescription(String.valueOf(dataSnapshot.child("J101").child("description").getValue()));
 
-                            //productImage.setImageDrawable(getDrawable(R.drawable.frock2));
-                            Intent intent = new Intent(getApplicationContext(), admin_product_view.class);
-                            intent.putExtra("itemName", product.getItemName());
-                            intent.putExtra("itemCode", product.getItemCode());
-                            intent.putExtra("description", product.getDescription());
-                            intent.putExtra("price", product.getPrice());
-                            intent.putExtra("size", product.getSize());
-                            intent.putExtra("image", "j7");
-                            startActivity(intent);
+                            if (isAdmin.equals("false")) {
+                                Intent intent = new Intent(getApplicationContext(), single_product.class);
+                                intent.putExtra("itemName", product.getItemName());
+                                intent.putExtra("itemCode", product.getItemCode());
+                                intent.putExtra("description", product.getDescription());
+                                intent.putExtra("price", product.getPrice());
+                                intent.putExtra("size", product.getSize());
+                                intent.putExtra("image", "j7");
+                                intent.putExtra("category", item);
+                                startActivity(intent);
+
+                            }
+                            else {
+                                Intent intent = new Intent(getApplicationContext(), admin_product_view.class);
+                                intent.putExtra("itemName", product.getItemName());
+                                intent.putExtra("itemCode", product.getItemCode());
+                                intent.putExtra("description", product.getDescription());
+                                intent.putExtra("price", product.getPrice());
+                                intent.putExtra("size", product.getSize());
+                                intent.putExtra("image", "j7");
+                                intent.putExtra("category", item);
+
+                                startActivity(intent);
+                            }
                         }
                     }
                 });
@@ -132,16 +164,30 @@ public class jewelry extends AppCompatActivity {
                             product.setSize(String.valueOf(dataSnapshot.child("J102").child("size").getValue()));
                             product.setDescription(String.valueOf(dataSnapshot.child("J102").child("description").getValue()));
 
+                            if (isAdmin.equals("false")) {
+                                Intent intent = new Intent(getApplicationContext(), single_product.class);
+                                intent.putExtra("itemName", product.getItemName());
+                                intent.putExtra("itemCode", product.getItemCode());
+                                intent.putExtra("description", product.getDescription());
+                                intent.putExtra("price", product.getPrice());
+                                intent.putExtra("size", product.getSize());
+                                intent.putExtra("image", "j4");
+                                intent.putExtra("category", item);
+                                startActivity(intent);
 
-                            Intent intent = new Intent(getApplicationContext(), admin_product_view.class);
-                            intent.putExtra("itemName", product.getItemName());
-                            intent.putExtra("itemCode", product.getItemCode());
-                            intent.putExtra("description", product.getDescription());
-                            intent.putExtra("price", product.getPrice());
-                            intent.putExtra("size", product.getSize());
-                            intent.putExtra("image", "j4");
+                            }
+                            else {
+                                Intent intent = new Intent(getApplicationContext(), admin_product_view.class);
+                                intent.putExtra("itemName", product.getItemName());
+                                intent.putExtra("itemCode", product.getItemCode());
+                                intent.putExtra("description", product.getDescription());
+                                intent.putExtra("price", product.getPrice());
+                                intent.putExtra("size", product.getSize());
+                                intent.putExtra("image", "j4");
+                                intent.putExtra("category", item);
 
-                            startActivity(intent);
+                                startActivity(intent);
+                            }
                         }
                     }
                 });
@@ -165,16 +211,30 @@ public class jewelry extends AppCompatActivity {
                             product.setSize(String.valueOf(dataSnapshot.child("J103").child("size").getValue()));
                             product.setDescription(String.valueOf(dataSnapshot.child("J103").child("description").getValue()));
 
-                            //productImage.setImageDrawable(getDrawable(R.drawable.frock5));
-                            Intent intent = new Intent(getApplicationContext(), admin_product_view.class);
-                            intent.putExtra("itemName", product.getItemName());
-                            intent.putExtra("itemCode", product.getItemCode());
-                            intent.putExtra("description", product.getDescription());
-                            intent.putExtra("price", product.getPrice());
-                            intent.putExtra("size", product.getSize());
-                            intent.putExtra("image", "j5");
+                            if (isAdmin.equals("false")) {
+                                Intent intent = new Intent(getApplicationContext(), single_product.class);
+                                intent.putExtra("itemName", product.getItemName());
+                                intent.putExtra("itemCode", product.getItemCode());
+                                intent.putExtra("description", product.getDescription());
+                                intent.putExtra("price", product.getPrice());
+                                intent.putExtra("size", product.getSize());
+                                intent.putExtra("image", "j5");
+                                intent.putExtra("category", item);
+                                startActivity(intent);
 
-                            startActivity(intent);
+                            }
+                            else {
+                                Intent intent = new Intent(getApplicationContext(), admin_product_view.class);
+                                intent.putExtra("itemName", product.getItemName());
+                                intent.putExtra("itemCode", product.getItemCode());
+                                intent.putExtra("description", product.getDescription());
+                                intent.putExtra("price", product.getPrice());
+                                intent.putExtra("size", product.getSize());
+                                intent.putExtra("image", "j5");
+                                intent.putExtra("category", item);
+
+                                startActivity(intent);
+                            }
                         }
                     }
                 });

@@ -44,6 +44,9 @@ public class trousers extends AppCompatActivity {
         trouserPrice3 = findViewById(R.id.trouserPrice3);
         trouserPrice4 = findViewById(R.id.trouserPrice4);
 
+        String isAdmin = getIntent().getStringExtra("isAdmin");
+
+
         String item = "Trousers";
 
         readData(item);
@@ -65,16 +68,30 @@ public class trousers extends AppCompatActivity {
                             product.setSize(String.valueOf(dataSnapshot.child("T100").child("size").getValue()));
                             product.setDescription(String.valueOf(dataSnapshot.child("T100").child("description").getValue()));
 
-                            //productImage.setImageResource(R.drawable.frock1);
-                            Intent intent = new Intent(getApplicationContext(), admin_product_view.class);
-                            intent.putExtra("itemName", product.getItemName());
-                            intent.putExtra("itemCode", product.getItemCode());
-                            intent.putExtra("description", product.getDescription());
-                            intent.putExtra("price", product.getPrice());
-                            intent.putExtra("size", product.getSize());
-                            intent.putExtra("image", "tr1");
-                            startActivity(intent);
+                            if (isAdmin.equals("false")) {
+                                Intent intent = new Intent(getApplicationContext(), single_product.class);
+                                intent.putExtra("itemName", product.getItemName());
+                                intent.putExtra("itemCode", product.getItemCode());
+                                intent.putExtra("description", product.getDescription());
+                                intent.putExtra("price", product.getPrice());
+                                intent.putExtra("size", product.getSize());
+                                intent.putExtra("image", "tr1");
+                                intent.putExtra("category", item);
+                                startActivity(intent);
 
+                            }
+                            else {
+                                Intent intent = new Intent(getApplicationContext(), admin_product_view.class);
+                                intent.putExtra("itemName", product.getItemName());
+                                intent.putExtra("itemCode", product.getItemCode());
+                                intent.putExtra("description", product.getDescription());
+                                intent.putExtra("price", product.getPrice());
+                                intent.putExtra("size", product.getSize());
+                                intent.putExtra("image", "tr1");
+                                intent.putExtra("category", item);
+
+                                startActivity(intent);
+                            }
                         }
                     }
                 });
@@ -98,15 +115,30 @@ public class trousers extends AppCompatActivity {
                             product.setSize(String.valueOf(dataSnapshot.child("T101").child("size").getValue()));
                             product.setDescription(String.valueOf(dataSnapshot.child("T101").child("description").getValue()));
 
-                            //productImage.setImageDrawable(getDrawable(R.drawable.frock2));
-                            Intent intent = new Intent(getApplicationContext(), admin_product_view.class);
-                            intent.putExtra("itemName", product.getItemName());
-                            intent.putExtra("itemCode", product.getItemCode());
-                            intent.putExtra("description", product.getDescription());
-                            intent.putExtra("price", product.getPrice());
-                            intent.putExtra("size", product.getSize());
-                            intent.putExtra("image", "tr2");
-                            startActivity(intent);
+                            if (isAdmin.equals("false")) {
+                                Intent intent = new Intent(getApplicationContext(), single_product.class);
+                                intent.putExtra("itemName", product.getItemName());
+                                intent.putExtra("itemCode", product.getItemCode());
+                                intent.putExtra("description", product.getDescription());
+                                intent.putExtra("price", product.getPrice());
+                                intent.putExtra("size", product.getSize());
+                                intent.putExtra("image", "tr2");
+                                intent.putExtra("category", item);
+                                startActivity(intent);
+
+                            }
+                            else {
+                                Intent intent = new Intent(getApplicationContext(), admin_product_view.class);
+                                intent.putExtra("itemName", product.getItemName());
+                                intent.putExtra("itemCode", product.getItemCode());
+                                intent.putExtra("description", product.getDescription());
+                                intent.putExtra("price", product.getPrice());
+                                intent.putExtra("size", product.getSize());
+                                intent.putExtra("image", "tr2");
+                                intent.putExtra("category", item);
+
+                                startActivity(intent);
+                            }
                         }
                     }
                 });
@@ -130,16 +162,30 @@ public class trousers extends AppCompatActivity {
                             product.setSize(String.valueOf(dataSnapshot.child("T102").child("size").getValue()));
                             product.setDescription(String.valueOf(dataSnapshot.child("T102").child("description").getValue()));
 
+                            if (isAdmin.equals("false")) {
+                                Intent intent = new Intent(getApplicationContext(), single_product.class);
+                                intent.putExtra("itemName", product.getItemName());
+                                intent.putExtra("itemCode", product.getItemCode());
+                                intent.putExtra("description", product.getDescription());
+                                intent.putExtra("price", product.getPrice());
+                                intent.putExtra("size", product.getSize());
+                                intent.putExtra("image", "tr3");
+                                intent.putExtra("category", item);
+                                startActivity(intent);
 
-                            Intent intent = new Intent(getApplicationContext(), admin_product_view.class);
-                            intent.putExtra("itemName", product.getItemName());
-                            intent.putExtra("itemCode", product.getItemCode());
-                            intent.putExtra("description", product.getDescription());
-                            intent.putExtra("price", product.getPrice());
-                            intent.putExtra("size", product.getSize());
-                            intent.putExtra("image", "tr3");
+                            }
+                            else {
+                                Intent intent = new Intent(getApplicationContext(), admin_product_view.class);
+                                intent.putExtra("itemName", product.getItemName());
+                                intent.putExtra("itemCode", product.getItemCode());
+                                intent.putExtra("description", product.getDescription());
+                                intent.putExtra("price", product.getPrice());
+                                intent.putExtra("size", product.getSize());
+                                intent.putExtra("image", "tr3");
+                                intent.putExtra("category", item);
 
-                            startActivity(intent);
+                                startActivity(intent);
+                            }
                         }
                     }
                 });
@@ -163,16 +209,30 @@ public class trousers extends AppCompatActivity {
                             product.setSize(String.valueOf(dataSnapshot.child("T103").child("size").getValue()));
                             product.setDescription(String.valueOf(dataSnapshot.child("T103").child("description").getValue()));
 
-                            //productImage.setImageDrawable(getDrawable(R.drawable.frock5));
-                            Intent intent = new Intent(getApplicationContext(), admin_product_view.class);
-                            intent.putExtra("itemName", product.getItemName());
-                            intent.putExtra("itemCode", product.getItemCode());
-                            intent.putExtra("description", product.getDescription());
-                            intent.putExtra("price", product.getPrice());
-                            intent.putExtra("size", product.getSize());
-                            intent.putExtra("image", "tr7");
+                            if (isAdmin.equals("false")) {
+                                Intent intent = new Intent(getApplicationContext(), single_product.class);
+                                intent.putExtra("itemName", product.getItemName());
+                                intent.putExtra("itemCode", product.getItemCode());
+                                intent.putExtra("description", product.getDescription());
+                                intent.putExtra("price", product.getPrice());
+                                intent.putExtra("size", product.getSize());
+                                intent.putExtra("image", "tr7");
+                                intent.putExtra("category", item);
+                                startActivity(intent);
 
-                            startActivity(intent);
+                            }
+                            else {
+                                Intent intent = new Intent(getApplicationContext(), admin_product_view.class);
+                                intent.putExtra("itemName", product.getItemName());
+                                intent.putExtra("itemCode", product.getItemCode());
+                                intent.putExtra("description", product.getDescription());
+                                intent.putExtra("price", product.getPrice());
+                                intent.putExtra("size", product.getSize());
+                                intent.putExtra("image", "tr7");
+                                intent.putExtra("category", item);
+
+                                startActivity(intent);
+                            }
                         }
                     }
                 });

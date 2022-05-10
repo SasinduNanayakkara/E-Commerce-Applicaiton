@@ -46,6 +46,8 @@ public class bags extends AppCompatActivity {
         bagPrice3 = findViewById(R.id.bag3Price);
         bagPrice4 = findViewById(R.id.bag4price);
 
+        String isAdmin = getIntent().getStringExtra("isAdmin");
+
         String item = "Bags";
 
         readData(item);
@@ -68,15 +70,29 @@ public class bags extends AppCompatActivity {
                             product.setDescription(String.valueOf(dataSnapshot.child("B100").child("description").getValue()));
 
                             //productImage.setImageResource(R.drawable.frock1);
-                            Intent intent = new Intent(getApplicationContext(), admin_product_view.class);
-                            intent.putExtra("itemName", product.getItemName());
-                            intent.putExtra("itemCode", product.getItemCode());
-                            intent.putExtra("description", product.getDescription());
-                            intent.putExtra("price", product.getPrice());
-                            intent.putExtra("size", product.getSize());
-                            intent.putExtra("image", "bg1");
-                            startActivity(intent);
+                            if (isAdmin.equals("false")) {
+                                Intent intent = new Intent(getApplicationContext(), single_product.class);
+                                intent.putExtra("itemName", product.getItemName());
+                                intent.putExtra("itemCode", product.getItemCode());
+                                intent.putExtra("description", product.getDescription());
+                                intent.putExtra("price", product.getPrice());
+                                intent.putExtra("size", product.getSize());
+                                intent.putExtra("image", "bg1");
+                                intent.putExtra("category", item);
+                                startActivity(intent);
 
+                            }
+                            else {
+                                Intent intent = new Intent(getApplicationContext(), admin_product_view.class);
+                                intent.putExtra("itemName", product.getItemName());
+                                intent.putExtra("itemCode", product.getItemCode());
+                                intent.putExtra("description", product.getDescription());
+                                intent.putExtra("price", product.getPrice());
+                                intent.putExtra("size", product.getSize());
+                                intent.putExtra("image", "bg1");
+                                intent.putExtra("category", item);
+                                startActivity(intent);
+                            }
                         }
                     }
                 });
@@ -100,14 +116,29 @@ public class bags extends AppCompatActivity {
                             product.setSize(String.valueOf(dataSnapshot.child("B101").child("size").getValue()));
                             product.setDescription(String.valueOf(dataSnapshot.child("B101").child("description").getValue()));
 
-                            Intent intent = new Intent(getApplicationContext(), admin_product_view.class);
-                            intent.putExtra("itemName", product.getItemName());
-                            intent.putExtra("itemCode", product.getItemCode());
-                            intent.putExtra("description", product.getDescription());
-                            intent.putExtra("price", product.getPrice());
-                            intent.putExtra("size", product.getSize());
-                            intent.putExtra("image", "bg2");
-                            startActivity(intent);
+                            if (isAdmin.equals("false")) {
+                                Intent intent = new Intent(getApplicationContext(), single_product.class);
+                                intent.putExtra("itemName", product.getItemName());
+                                intent.putExtra("itemCode", product.getItemCode());
+                                intent.putExtra("description", product.getDescription());
+                                intent.putExtra("price", product.getPrice());
+                                intent.putExtra("size", product.getSize());
+                                intent.putExtra("image", "bg2");
+                                intent.putExtra("category", item);
+                                startActivity(intent);
+                            }
+                            else {
+                                Intent intent = new Intent(getApplicationContext(), admin_product_view.class);
+                                intent.putExtra("itemName", product.getItemName());
+                                intent.putExtra("itemCode", product.getItemCode());
+                                intent.putExtra("description", product.getDescription());
+                                intent.putExtra("price", product.getPrice());
+                                intent.putExtra("size", product.getSize());
+                                intent.putExtra("image", "bg2");
+                                intent.putExtra("category", item);
+
+                                startActivity(intent);
+                            }
                         }
                     }
                 });
@@ -131,15 +162,31 @@ public class bags extends AppCompatActivity {
                             product.setSize(String.valueOf(dataSnapshot.child("B102").child("size").getValue()));
                             product.setDescription(String.valueOf(dataSnapshot.child("B102").child("description").getValue()));
 
-                            Intent intent = new Intent(getApplicationContext(), admin_product_view.class);
-                            intent.putExtra("itemName", product.getItemName());
-                            intent.putExtra("itemCode", product.getItemCode());
-                            intent.putExtra("description", product.getDescription());
-                            intent.putExtra("price", product.getPrice());
-                            intent.putExtra("size", product.getSize());
-                            intent.putExtra("image", "bg5");
+                            if (isAdmin.equals("false")) {
+                                Intent intent = new Intent(getApplicationContext(), single_product.class);
+                                intent.putExtra("itemName", product.getItemName());
+                                intent.putExtra("itemCode", product.getItemCode());
+                                intent.putExtra("description", product.getDescription());
+                                intent.putExtra("price", product.getPrice());
+                                intent.putExtra("size", product.getSize());
+                                intent.putExtra("image", "bg5");
+                                intent.putExtra("category", item);
+                                startActivity(intent);
 
-                            startActivity(intent);
+                            }
+                            else  {
+                                Intent intent = new Intent(getApplicationContext(), admin_product_view.class);
+                                intent.putExtra("itemName", product.getItemName());
+                                intent.putExtra("itemCode", product.getItemCode());
+                                intent.putExtra("description", product.getDescription());
+                                intent.putExtra("price", product.getPrice());
+                                intent.putExtra("size", product.getSize());
+                                intent.putExtra("image", "bg5");
+                                intent.putExtra("category", item);
+
+                                startActivity(intent);
+
+                            }
                         }
                     }
                 });
@@ -163,16 +210,30 @@ public class bags extends AppCompatActivity {
                             product.setSize(String.valueOf(dataSnapshot.child("B103").child("size").getValue()));
                             product.setDescription(String.valueOf(dataSnapshot.child("B103").child("description").getValue()));
 
-                            //productImage.setImageDrawable(getDrawable(R.drawable.frock5));
-                            Intent intent = new Intent(getApplicationContext(), admin_product_view.class);
-                            intent.putExtra("itemName", product.getItemName());
-                            intent.putExtra("itemCode", product.getItemCode());
-                            intent.putExtra("description", product.getDescription());
-                            intent.putExtra("price", product.getPrice());
-                            intent.putExtra("size", product.getSize());
-                            intent.putExtra("image", "bg8");
+                            if (isAdmin.equals("false")) {
+                                Intent intent = new Intent(getApplicationContext(), single_product.class);
+                                intent.putExtra("itemName", product.getItemName());
+                                intent.putExtra("itemCode", product.getItemCode());
+                                intent.putExtra("description", product.getDescription());
+                                intent.putExtra("price", product.getPrice());
+                                intent.putExtra("size", product.getSize());
+                                intent.putExtra("image", "bg8");
+                                intent.putExtra("category", item);
+                                startActivity(intent);
 
-                            startActivity(intent);
+                            } else {
+                                Intent intent = new Intent(getApplicationContext(), admin_product_view.class);
+                                intent.putExtra("itemName", product.getItemName());
+                                intent.putExtra("itemCode", product.getItemCode());
+                                intent.putExtra("description", product.getDescription());
+                                intent.putExtra("price", product.getPrice());
+                                intent.putExtra("size", product.getSize());
+                                intent.putExtra("image", "bg8");
+                                intent.putExtra("category", item);
+                                intent.putExtra("category", item);
+
+                                startActivity(intent);
+                            }
                         }
                     }
                 });
