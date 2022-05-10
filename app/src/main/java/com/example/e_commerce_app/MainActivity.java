@@ -15,7 +15,7 @@ import java.util.HashMap;
 public class MainActivity extends AppCompatActivity {
 
     Button btn;
-    TextView textMsg;
+   // TextView textMsg;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         btn = findViewById(R.id.btn);
-        textMsg = findViewById(R.id.textMsg);
+      //  textMsg = findViewById(R.id.textMsg);
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
