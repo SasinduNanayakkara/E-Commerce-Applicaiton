@@ -74,6 +74,8 @@ public class tshirts extends AppCompatActivity {
                             intent.putExtra("price", product.getPrice());
                             intent.putExtra("size", product.getSize());
                             intent.putExtra("image", "tshirt1");
+                            intent.putExtra("category", item);
+
                             startActivity(intent);
 
                         }
@@ -108,6 +110,8 @@ public class tshirts extends AppCompatActivity {
                             intent.putExtra("price", product.getPrice());
                             intent.putExtra("size", product.getSize());
                             intent.putExtra("image", "tshirt2");
+                            intent.putExtra("category", item);
+
                             startActivity(intent);
                         }
                     }
@@ -140,6 +144,7 @@ public class tshirts extends AppCompatActivity {
                             intent.putExtra("price", product.getPrice());
                             intent.putExtra("size", product.getSize());
                             intent.putExtra("image", "tshirt3");
+                            intent.putExtra("category", item);
 
                             startActivity(intent);
                         }
@@ -173,6 +178,7 @@ public class tshirts extends AppCompatActivity {
                             intent.putExtra("price", product.getPrice());
                             intent.putExtra("size", product.getSize());
                             intent.putExtra("image", "tshirt5");
+                            intent.putExtra("category", item);
 
                             startActivity(intent);
                         }
