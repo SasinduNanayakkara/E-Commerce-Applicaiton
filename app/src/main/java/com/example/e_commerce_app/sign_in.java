@@ -100,6 +100,7 @@ public class sign_in extends AppCompatActivity {
                                     r.setRegisterPhoneNumber(String.valueOf(dataSnapshot.child("registerPhoneNumber").getValue()));
                                     r.setRegisterAddress(String.valueOf(dataSnapshot.child("registerAddress").getValue()));
                                     r.setRegisterCountry(String.valueOf(dataSnapshot.child("registerCountry").getValue()));
+                                    r.setAdmin(Boolean.valueOf((Boolean) dataSnapshot.child("admin").getValue()));
 
                                     Intent intent = new Intent(getApplicationContext(), home.class);
                                     intent.putExtra("registerName", r.getRegisterName());
