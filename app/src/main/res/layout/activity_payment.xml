@@ -61,7 +61,7 @@
             app:layout_constraintVertical_bias="0.23000002" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName2"
+            android:id="@+id/CardNumber"
             android:layout_width="350dp"
             android:layout_height="54dp"
             android:background="@drawable/layout_border"
@@ -95,7 +95,7 @@
             app:layout_constraintVertical_bias="0.42000002" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName6"
+            android:id="@+id/ExpiryDate"
             android:layout_width="150dp"
             android:layout_height="54dp"
             android:background="@drawable/layout_border"
@@ -130,7 +130,7 @@
             app:layout_constraintVertical_bias="0.42000002" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName7"
+            android:id="@+id/CVVNumber"
             android:layout_width="150dp"
             android:layout_height="54dp"
             android:background="@drawable/layout_border"
@@ -165,7 +165,7 @@
             app:layout_constraintVertical_bias="0.61" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName8"
+            android:id="@+id/Name"
             android:layout_width="350dp"
             android:layout_height="54dp"
             android:background="@drawable/layout_border"
@@ -199,7 +199,7 @@
             app:layout_constraintVertical_bias="0.83" />
 
         <Button
-            android:id="@+id/button7"
+            android:id="@+id/PayButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/layout_border"
