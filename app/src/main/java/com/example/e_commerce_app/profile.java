@@ -1,19 +1,15 @@
 package com.example.e_commerce_app;
 
-import android.annotation.SuppressLint;
-import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
-import android.widget.Toolbar;
+
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -23,131 +19,103 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+
 public class profile extends AppCompatActivity {
 
-    String userId;
-    TextView textView4,textView6,textView8,textView10,textView12;
-    // TextView email;
-    Button button,button13;
-    DatabaseReference dbRef;
-    ProgressDialog spinner;
+    TextView registerName,registerEmail,registerPhoneNumber,registerAddress,registerCountry;
+    Button updatebutton,deletebutton;
+    FirebaseAuth fAuth;
+    DatabaseReference databaseReference;
+    String userID;
 
-
-    @SuppressLint("WrongViewCast")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile);
-        //initializing
-        textView4 = findViewById(R.id.textView4);
-        textView6 = findViewById(R.id.textView6);
-        textView8 = findViewById(R.id.textView8);
-        textView10 = findViewById(R.id.textView10);
-        textView12 = findViewById(R.id.textView12);
-        button = findViewById(R.id.button);
-        button13 = findViewById(R.id.button13);
+        registerName = findViewById(R.id.textView4);
+        registerEmail = findViewById(R.id.textView6);
+        registerPhoneNumber = findViewById(R.id.textView8);
+        registerAddress = findViewById(R.id.textView10);
+        registerCountry = findViewById(R.id.textView12);
+        updatebutton= findViewById(R.id.button);
+        deletebutton = findViewById(R.id.button13);
 
-        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-        userId = user.getUid();
+        //get current instance of firebase authentication
+        fAuth = FirebaseAuth.getInstance();
 
-        getUserDetails();
+        //check whether user is not logged in, return to Login page
+        if (fAuth.getCurrentUser() == null){
+            Intent i = new Intent(getApplicationContext(), profile.class).putExtra("from", "Users");
+            startActivity(i);
+        }
+        else{
+            userID = fAuth.getCurrentUser().getUid();
+            FirebaseUser Users = fAuth.getCurrentUser();
 
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-
-        button .setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                //update userdetails
-                button ();
-            }
-        });
-
-    }
-
-    public void getUserDetails(){
-
-        DatabaseReference dbRef = FirebaseDatabase.getInstance().getReference().child("Users").child((userId));
-
-        dbRef.addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-
-                if(snapshot.hasChildren()){
-
-                    textView4.setText(snapshot.child("registerName").getValue().toString());
-                    textView6.setText(snapshot.child("registerEmail").getValue().toString());
-                    textView8.setText(snapshot.child("registerPhoneNumber").getValue().toString());
-                    textView10.setText(snapshot.child("registerAddress").getValue().toString());
-                    textView12.setText(snapshot.child("registerCountry").getValue().toString());
-                }
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-
-            }
-        });
-    }
-
-    public void button(){
-
-        if(validateMobileNumber()){
-
-            dbRef = FirebaseDatabase.getInstance().getReference().child("Users").child(userId);
-
-            dbRef.addListenerForSingleValueEvent(new ValueEventListener() {
+            //fetch user data from DB
+            /*databaseReference = FirebaseDatabase.getInstance().getReference().child("Users").child(userID);
+            databaseReference.addListenerForSingleValueEvent(new ValueEventListener() {
                 @Override
                 public void onDataChange(@NonNull DataSnapshot snapshot) {
+                    //assign values to text fields
+                    text_name.setText(snapshot.child("Name").getValue().toString());
+                    text_email.setText(snapshot.child("Email").getValue().toString());
+                    text_phone.setText(snapshot.child("Phone Number").getValue().toString());
+                    text_add.setText(snapshot.child("Address").getValue().toString());
+                    text_country.setText(snapshot.child("Country").getValue().toString());
+                    user_name.setText(snapshot.child(" ").getValue().toString());
 
-                    dbRef.child("registerName").setValue(textView4.getText().toString().trim());
-                    dbRef.child("registerEmail").setValue(textView6.getText().toString().trim());
-                    dbRef.child("registerPhoneNumber").setValue(textView8.getText().toString().trim());
-                    dbRef.child("registerAddress").setValue(textView10.getText().toString().trim());
-                    dbRef.child("registerCountry").setValue(textView12.getText().toString().trim());
-
-
-                    Toast.makeText(getApplicationContext(),
-                            "Successfully updated details",
-                            Toast.LENGTH_SHORT)
-                            .show();
-
-                    Intent intent = new Intent(profile.this, edit_profile.class);
-                    startActivity(intent);
                 }
-
                 @Override
                 public void onCancelled(@NonNull DatabaseError error) {
 
                 }
+            });*/
+
+            String rName = getIntent().getStringExtra("registerName");
+            String rEmail = getIntent().getStringExtra("registerEmail");
+            String rPhoneNumber = getIntent().getStringExtra("registerPhoneNumber");
+            String rAddress = getIntent().getStringExtra("registerAddress");
+            String rCountry = getIntent().getStringExtra("registerCountry");
+            String admin = getIntent().getStringExtra("isAdmin");
+            String rpassword = getIntent().getStringExtra("registerPassword");
+
+            registerName.setText(rName);
+            registerEmail.setText(rEmail);
+            registerPhoneNumber.setText(rPhoneNumber);
+            registerAddress.setText(rAddress);
+            registerCountry.setText(rCountry);
+
+
+
+
+            updatebutton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(v.getContext(), edit_profile.class);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    System.out.println(rpassword);
+
+                    intent.putExtra("registerName",  rName);
+                    intent.putExtra("registerEmail",  rEmail);
+                    intent.putExtra("registerPhoneNumber",  rPhoneNumber);
+                    intent.putExtra("registerAddress",  rAddress);
+                    intent.putExtra("registerCountry",  rCountry);
+                    intent.putExtra("registerPassword", rpassword );
+
+                    startActivity(intent);
+                }
             });
+
         }
+
+        deletebutton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                FirebaseAuth.getInstance().signOut();
+                startActivity(new Intent(profile.this, sign_in.class));
+            }
+        });
 
     }
-
-
-    public boolean validateMobileNumber()
-    {
-        String userInputPhoneNumber = textView8.getText().toString();
-
-        if(userInputPhoneNumber.length() == 10)
-        {
-            return true;
-        }
-        else {
-
-            Toast.makeText(getApplicationContext(),
-                    "Please enter valid phone number",
-                    Toast.LENGTH_SHORT)
-                    .show();
-
-            return false;
-        }
-
-    }
-
-
 }

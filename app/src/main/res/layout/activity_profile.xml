@@ -23,7 +23,7 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Navodhya Yasi98"
+        android:text="Welcome  !"
         android:textColor="@color/bee_yellow"
         android:textSize="30sp"
         android:textStyle="bold"

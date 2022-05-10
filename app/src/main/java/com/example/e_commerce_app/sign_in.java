@@ -24,6 +24,7 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
@@ -35,6 +36,7 @@ public class sign_in extends AppCompatActivity {
     TextView signinRegister;
     FirebaseAuth fAuth;
 
+    DatabaseReference reference;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -86,9 +88,38 @@ public class sign_in extends AppCompatActivity {
                 fAuth.signInWithEmailAndPassword(text_email, text_password).addOnSuccessListener(new OnSuccessListener<AuthResult>(){
                     @Override
                     public void onSuccess(AuthResult authResult) {
+                        reference = FirebaseDatabase.getInstance().getReference("Users");
+                        reference.child(text_password).get().addOnCompleteListener(new OnCompleteListener<DataSnapshot>() {
+                            @Override
+                            public void onComplete(@NonNull Task<DataSnapshot> task) {
+                                if (task.isSuccessful()) {
+                                    DataSnapshot dataSnapshot = task.getResult();
+                                    registers r = new registers();
+                                    r.setRegisterName(String.valueOf(dataSnapshot.child("registerName").getValue()));
+                                    r.setRegisterEmail(String.valueOf(dataSnapshot.child("registerEmail").getValue()));
+                                    r.setRegisterPhoneNumber(String.valueOf(dataSnapshot.child("registerPhoneNumber").getValue()));
+                                    r.setRegisterAddress(String.valueOf(dataSnapshot.child("registerAddress").getValue()));
+                                    r.setRegisterCountry(String.valueOf(dataSnapshot.child("registerCountry").getValue()));
+
+                                    Intent intent = new Intent(getApplicationContext(), home.class);
+                                    intent.putExtra("registerName", r.getRegisterName());
+                                    intent.putExtra("registerEmail", r.getRegisterEmail());
+                                    intent.putExtra("registerPhoneNumber", r.getRegisterPhoneNumber());
+                                    intent.putExtra("registerAddress", r.getRegisterAddress());
+                                    intent.putExtra("registerCountry", r.getRegisterCountry());
+
+                                    String admin = new Boolean(r.isAdmin()).toString();
+                                    intent.putExtra("isAdmin", admin);
+                                    intent.putExtra("registerPassword", text_password);
+                                    System.out.println(text_password);
+
+                                    startActivity(intent);
+                                }
+                            }
+                        });
 
                         Toast.makeText(sign_in.this, "Login Successfully!", Toast.LENGTH_SHORT).show();
-                        startActivity(new Intent(sign_in.this, profile.class));
+
                        // overridePendingTransition(R.anim.animation_enter, R.anim.animation_leave);
                         finish();
                     }

@@ -97,6 +97,8 @@
             android:name=".sign_in"
             android:exported="false" />
         <activity
+            android:name=".home"
+            android:exported="false" />
             android:name=".activity_your_order"
             android:exported="false"/>
         <activity
