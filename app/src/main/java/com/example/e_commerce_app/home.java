@@ -43,6 +43,7 @@ public class home extends AppCompatActivity {
         String registerCountry = getIntent().getStringExtra("registerCountry");
         String  isAdmin = getIntent().getStringExtra("isAdmin");
         String  registerPassword = getIntent().getStringExtra("registerPassword");
+        System.out.println("home"+isAdmin);
 
         profileIcon.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -55,7 +56,6 @@ public class home extends AppCompatActivity {
                 intent.putExtra("registerCountry",  registerCountry);
                 intent.putExtra("isAdmin", isAdmin );
                 intent.putExtra("registerPassword", registerPassword );
-                System.out.println("home"+registerPassword);
 
 
                 startActivity(intent);
@@ -66,6 +66,7 @@ public class home extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), frock.class);
+                intent.putExtra("isAdmin", isAdmin);
                 startActivity(intent);
             }
         });
@@ -74,6 +75,7 @@ public class home extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), tshirts.class);
+                intent.putExtra("isAdmin", isAdmin);
                 startActivity(intent);
             }
         });
@@ -82,6 +84,7 @@ public class home extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), trousers.class);
+                intent.putExtra("isAdmin", isAdmin);
                 startActivity(intent);
             }
         });
@@ -90,6 +93,7 @@ public class home extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), jewelry.class);
+                intent.putExtra("isAdmin", isAdmin);
                 startActivity(intent);
             }
         });
@@ -98,6 +102,7 @@ public class home extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), shoes.class);
+                intent.putExtra("isAdmin", isAdmin);
                 startActivity(intent);
             }
         });
@@ -106,6 +111,7 @@ public class home extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), shoes.class);
+                intent.putExtra("isAdmin", isAdmin);
                 startActivity(intent);
             }
         });
