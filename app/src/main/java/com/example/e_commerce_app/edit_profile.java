@@ -1,73 +1,96 @@
 package com.example.e_commerce_app;
 
-import androidx.appcompat.app.AppCompatActivity;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.widget.ArrayAdapter;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
-import com.google.firebase.database.DataSnapshot;
-import com.google.firebase.database.DatabaseError;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.google.firebase.database.ValueEventListener;
 
-import java.util.ArrayList;
 import java.util.HashMap;
-
 
 public class edit_profile extends AppCompatActivity {
 
-    EditText ProfileNameInput, ProfileEmailInput, ProfilePhoneInput, ProfileAddressInput, ProfileCountryInput;
-    Button ProfileSaveButton;
+    DatabaseReference databaseReference;
 
+    EditText name, email, pNumber, address, country;
+    Button ProfileSaveButton;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_edit_profile);
-        ProfileNameInput = findViewById(R.id.ProfileNameInput);
-        ProfileEmailInput = findViewById(R.id.ProfileEmailInput);
-        ProfilePhoneInput = findViewById(R.id.ProfilePhoneInput);
-        ProfileAddressInput = findViewById(R.id.ProfileAddressInput);
-        ProfileCountryInput = findViewById(R.id.ProfileCountryInput);
+
         ProfileSaveButton = findViewById(R.id.ProfileSaveButton);
+        name = findViewById(R.id.ProfileNameInput);
+        email = findViewById(R.id.ProfileEmailInput);
+        pNumber = findViewById(R.id.ProfilePhoneInput);
+        address = findViewById(R.id.ProfileAddressInput);
+        country= findViewById(R.id.ProfileCountryInput);
 
-        final ArrayList<String> profileList = new ArrayList<>();
-        final ArrayAdapter adapter = new ArrayAdapter<String>(this, R.layout.activity_edit_profile,profileList);
 
-        DatabaseReference reference = FirebaseDatabase.getInstance().getReference().child("honeyBeeDB").child("Users");
-        reference.addValueEventListener(new ValueEventListener() {
+        name.setText(getIntent().getStringExtra("registerName"));
+        email.setText(getIntent().getStringExtra("registerEmail"));
+        pNumber.setText(getIntent().getStringExtra("registerPhoneNumber"));
+        address.setText(getIntent().getStringExtra("registerAddress"));
+        country.setText(getIntent().getStringExtra("registerCountry"));
+
+
+        ProfileSaveButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                for(DataSnapshot dataSnapshot: snapshot.getChildren()){
-                    System.out.println(((HashMap)(dataSnapshot.getValue())).get("category"));
-                    profileList.add(dataSnapshot.getValue().toString());
-
-                }
-
-                HashMap<String, String> product = new HashMap<>();
-                for (String s : profileList.get(3).replaceAll("\\{", "").replaceAll("\\}", "").split(",")) {
-                    product.put(s.trim().split("=")[0], s.trim().split("=")[1]);
-                }
-
-                adapter.notifyDataSetChanged();
-
-                System.out.println(profileList.get(3));
-
-                System.out.println(product);
-            }
+            public void onClick(View view) {
+                String nam = name.getText().toString();
+                String ema = email.getText().toString();
+                String pNum = pNumber.getText().toString();
+                String add = address.getText().toString();
+                String con = country.getText().toString();
 
 
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-
+                editProfile(nam, ema, pNum, add,con);
             }
         });
 
+    }
 
+    private void editProfile(String Name, String Email, String PNumber, String Address, String Country){
+
+        HashMap profile = new HashMap();
+        profile.put("registerName", Name);
+        profile.put("registerEmail", Email);
+        profile.put("registerPhoneNumber", PNumber);
+        profile.put("registerAddress", Address);
+        profile.put("registerCountry", Country);
+
+        String rPassword = getIntent().getStringExtra("registerPassword");
+        System.out.println(rPassword);
+
+        databaseReference = FirebaseDatabase.getInstance().getReference("Users");
+        databaseReference.child(rPassword).updateChildren(profile).addOnCompleteListener(new OnCompleteListener(){
+            @Override
+            public void onComplete(@NonNull Task task){
+                if(task.isSuccessful()) {
+                    name.setText("");
+                    email.setText("");
+                    pNumber.setText("");
+                    address.setText("");
+                    country.setText("");
+
+                    Toast.makeText(edit_profile.this, "Successfully Updated", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(getApplicationContext(), sign_in.class);
+                    startActivity(intent);
+                }else{
+                    Toast.makeText(edit_profile.this, "Failed to Update", Toast.LENGTH_SHORT).show();
+
+                }
+            }
+        });
 
     }
 }
