@@ -46,6 +46,9 @@ public class shoes extends AppCompatActivity {
         price3 = findViewById(R.id.shoePrice3);
         price4 = findViewById(R.id.shoePrice4);
 
+        String isAdmin = getIntent().getStringExtra("isAdmin");
+
+
         String item = "Shoes";
 
         readData(item);
@@ -68,6 +71,18 @@ public class shoes extends AppCompatActivity {
                             product.setDescription(String.valueOf(dataSnapshot.child("SE100").child("description").getValue()));
 
                             //productImage.setImageResource(R.drawable.frock1);
+                            if (isAdmin.equals("false")) {
+                                Intent intent = new Intent(getApplicationContext(), single_product.class);
+                                intent.putExtra("itemName", product.getItemName());
+                                intent.putExtra("itemCode", product.getItemCode());
+                                intent.putExtra("description", product.getDescription());
+                                intent.putExtra("price", product.getPrice());
+                                intent.putExtra("size", product.getSize());
+                                intent.putExtra("image", "sh1");
+                                intent.putExtra("category", item);
+                                startActivity(intent);
+
+                            }
                             Intent intent = new Intent(getApplicationContext(), admin_product_view.class);
                             intent.putExtra("itemName", product.getItemName());
                             intent.putExtra("itemCode", product.getItemCode());
@@ -102,7 +117,18 @@ public class shoes extends AppCompatActivity {
                             product.setSize(String.valueOf(dataSnapshot.child("SE101").child("size").getValue()));
                             product.setDescription(String.valueOf(dataSnapshot.child("SE101").child("description").getValue()));
 
-                            //productImage.setImageDrawable(getDrawable(R.drawable.frock2));
+                            if (isAdmin.equals("false")) {
+                                Intent intent = new Intent(getApplicationContext(), single_product.class);
+                                intent.putExtra("itemName", product.getItemName());
+                                intent.putExtra("itemCode", product.getItemCode());
+                                intent.putExtra("description", product.getDescription());
+                                intent.putExtra("price", product.getPrice());
+                                intent.putExtra("size", product.getSize());
+                                intent.putExtra("image", "sh4");
+                                intent.putExtra("category", item);
+                                startActivity(intent);
+
+                            }
                             Intent intent = new Intent(getApplicationContext(), admin_product_view.class);
                             intent.putExtra("itemName", product.getItemName());
                             intent.putExtra("itemCode", product.getItemCode());
@@ -136,17 +162,30 @@ public class shoes extends AppCompatActivity {
                             product.setSize(String.valueOf(dataSnapshot.child("SE102").child("size").getValue()));
                             product.setDescription(String.valueOf(dataSnapshot.child("SE102").child("description").getValue()));
 
+                            if (isAdmin.equals("false")) {
+                                Intent intent = new Intent(getApplicationContext(), single_product.class);
+                                intent.putExtra("itemName", product.getItemName());
+                                intent.putExtra("itemCode", product.getItemCode());
+                                intent.putExtra("description", product.getDescription());
+                                intent.putExtra("price", product.getPrice());
+                                intent.putExtra("size", product.getSize());
+                                intent.putExtra("image", "sh7");
+                                intent.putExtra("category", item);
+                                startActivity(intent);
 
-                            Intent intent = new Intent(getApplicationContext(), admin_product_view.class);
-                            intent.putExtra("itemName", product.getItemName());
-                            intent.putExtra("itemCode", product.getItemCode());
-                            intent.putExtra("description", product.getDescription());
-                            intent.putExtra("price", product.getPrice());
-                            intent.putExtra("size", product.getSize());
-                            intent.putExtra("image", "sh7");
-                            intent.putExtra("category", item);
+                            }
+                            else {
+                                Intent intent = new Intent(getApplicationContext(), admin_product_view.class);
+                                intent.putExtra("itemName", product.getItemName());
+                                intent.putExtra("itemCode", product.getItemCode());
+                                intent.putExtra("description", product.getDescription());
+                                intent.putExtra("price", product.getPrice());
+                                intent.putExtra("size", product.getSize());
+                                intent.putExtra("image", "sh7");
+                                intent.putExtra("category", item);
 
-                            startActivity(intent);
+                                startActivity(intent);
+                            }
                         }
                     }
                 });
@@ -170,17 +209,30 @@ public class shoes extends AppCompatActivity {
                             product.setSize(String.valueOf(dataSnapshot.child("SE103").child("size").getValue()));
                             product.setDescription(String.valueOf(dataSnapshot.child("SE103").child("description").getValue()));
 
-                            //productImage.setImageDrawable(getDrawable(R.drawable.frock5));
-                            Intent intent = new Intent(getApplicationContext(), admin_product_view.class);
-                            intent.putExtra("itemName", product.getItemName());
-                            intent.putExtra("itemCode", product.getItemCode());
-                            intent.putExtra("description", product.getDescription());
-                            intent.putExtra("price", product.getPrice());
-                            intent.putExtra("size", product.getSize());
-                            intent.putExtra("image", "sh5");
-                            intent.putExtra("category", item);
+                            if (isAdmin.equals("false")) {
+                                Intent intent = new Intent(getApplicationContext(), single_product.class);
+                                intent.putExtra("itemName", product.getItemName());
+                                intent.putExtra("itemCode", product.getItemCode());
+                                intent.putExtra("description", product.getDescription());
+                                intent.putExtra("price", product.getPrice());
+                                intent.putExtra("size", product.getSize());
+                                intent.putExtra("image", "sh5");
+                                intent.putExtra("category", item);
+                                startActivity(intent);
 
-                            startActivity(intent);
+                            }
+                            else {
+                                Intent intent = new Intent(getApplicationContext(), admin_product_view.class);
+                                intent.putExtra("itemName", product.getItemName());
+                                intent.putExtra("itemCode", product.getItemCode());
+                                intent.putExtra("description", product.getDescription());
+                                intent.putExtra("price", product.getPrice());
+                                intent.putExtra("size", product.getSize());
+                                intent.putExtra("image", "sh5");
+                                intent.putExtra("category", item);
+
+                                startActivity(intent);
+                            }
                         }
                     }
                 });
