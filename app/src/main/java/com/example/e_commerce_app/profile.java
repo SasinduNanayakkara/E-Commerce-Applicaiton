@@ -23,7 +23,7 @@ import com.google.firebase.database.ValueEventListener;
 public class profile extends AppCompatActivity {
 
     TextView registerName,registerEmail,registerPhoneNumber,registerAddress,registerCountry;
-    Button updatebutton,deletebutton;
+    Button updatebutton,deletebutton, productAdd;
     FirebaseAuth fAuth;
     DatabaseReference databaseReference;
     String userID;
@@ -39,6 +39,7 @@ public class profile extends AppCompatActivity {
         registerCountry = findViewById(R.id.textView12);
         updatebutton= findViewById(R.id.button);
         deletebutton = findViewById(R.id.button13);
+        productAdd = findViewById(R.id.productAdd);
 
         //get current instance of firebase authentication
         fAuth = FirebaseAuth.getInstance();
@@ -77,8 +78,13 @@ public class profile extends AppCompatActivity {
             String rPhoneNumber = getIntent().getStringExtra("registerPhoneNumber");
             String rAddress = getIntent().getStringExtra("registerAddress");
             String rCountry = getIntent().getStringExtra("registerCountry");
-            String admin = getIntent().getStringExtra("isAdmin");
             String rpassword = getIntent().getStringExtra("registerPassword");
+
+            String admin = getIntent().getStringExtra("isAdmin");
+            System.out.println("prodile   " + admin);
+            if (admin.equals("true")) {
+                productAdd.setText("Add Product");
+            }
 
             registerName.setText(rName);
             registerEmail.setText(rEmail);
@@ -107,7 +113,16 @@ public class profile extends AppCompatActivity {
                 }
             });
 
-        }
+            productAdd.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+
+                        Intent intent = new Intent(getApplicationContext(), product_add.class);
+                        startActivity(intent);
+
+                }
+            });
+
 
         deletebutton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -117,5 +132,8 @@ public class profile extends AppCompatActivity {
             }
         });
 
+
+
     }
+}
 }
